@@ -1,5 +1,4 @@
 import React from 'react'
-// import styles from './index.module.css'
 import Logo from './assets/Logo'
 import Avatar from './assets/Avatar'
 import Socials from './assets/Socials'
@@ -11,7 +10,7 @@ import gsap from 'gsap'
 
 const Home = () => {
 
-  const { pageTitle, setTitle } = useContext(DataContext)
+  const { pageTitle, setTitle, isDesktop } = useContext(DataContext)
 
   useEffect(() => {
     location.title = 'Freelance'
@@ -34,13 +33,14 @@ const Home = () => {
       <motion.section 
         ref={menu}
         className='lg:fixed h-screen z-10 lg:w-1/3 left-0 flex items-center flex-col  justify-evenly'>
-        <Logo/>
+        {isDesktop && <Logo/>}
        <div className='flex p-1 flex-col justify-start items-center gap-3 '>
         <Avatar />
         <h2 
         className='lg:text-[2vw]  text-2xl text-center text-gray-900'>
              Ronie Benitez
         </h2>
+      
         <Button/>
         <Socials/>
        </div>

@@ -6,8 +6,10 @@ const DataProvider = ({ children  }) => {
     const [title, setTitle] = useState(document.title);
     const [isLoading, setLoading] = useState(true)
     const [isToggleMenu, setToggleMenu] = useState (false);
-    const [isMobile, setMobile] = useState(window.innerWidth <= 600)
-    const [isTablet, setTablet] = useState(window.innerWidth <= 1024)
+    const [isMobile, setMobile] = useState(window.innerWidth >= 640)
+    const [isTablet, setTablet] = useState(window.innerWidth >= 768)
+    const [isDesktop, setDesktop] = useState(window.innerWidth >= 1024)
+
     const pageTitle = 'Ronie Benitez'
 
         useEffect(() => {
@@ -16,8 +18,9 @@ const DataProvider = ({ children  }) => {
 
         useEffect(() => {
                   const handleResize = () => {
-                    setMobile(window.innerWidth <= 600)
-                    setTablet(window.innerWidth <= 1024)
+                    setMobile(window.innerWidth >= 640)
+                    setTablet(window.innerWidth >= 768)
+                    setDesktop(window.innerWidth >= 10244)
                 }
 
                 handleResize();
@@ -37,6 +40,7 @@ const DataProvider = ({ children  }) => {
               isLoading, setLoading, 
               isMobile, setMobile,
               isTablet, setTablet,
+              isDesktop, setDesktop,
               setToggleMenu, isToggleMenu
               }}> 
               

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './index.module.css'
 import { useState, useContext, useRef, useEffect } from 'react'
 import { DataContext } from '../../context/DataContext'
 import gsap from 'gsap'
@@ -39,24 +38,24 @@ const Navbar = () => {
   return (
     <main
      ref={links}
-     className={styles.container}
+     className='shadow-sm fixed rounded-md h-[300px] w-[250px] top-[70px] right-2 z-30 flex opacity-0 bg-slate-500'
     >
         <div 
-        className={styles.linksContainer }   
+        className='flex flex-col w-full items-center justify-center text-2xl gap-5'
         >
-            <Link to='/' className={styles.link}>
+            <Link to='/'>
                 Home
             </Link>
         
-            <Link to='/gallery' className={styles.link} >
+            <Link to='/gallery' >
                 Gallery
             </Link>
 
-            <Link to='/pricing' className={styles.link}>
+            <Link to='/pricing'>
                 Pricing
             </Link>
             
-            <Link to='/info' className={styles.link}>
+            <Link to='/info'>
                 Info
             </Link>
         </div>
