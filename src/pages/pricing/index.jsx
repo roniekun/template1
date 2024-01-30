@@ -7,10 +7,8 @@ const Pricing = () => {
   const { pageTitle, setTitle } = useContext(DataContext)
 
   useEffect(() => {
+    location.title = 'Pricing'
     setTitle(`${location.title} - ${pageTitle}`)
-    return () =>{
-      location.title = 'Pricing'
-    }
   }, [location.pathname])
 
   return (

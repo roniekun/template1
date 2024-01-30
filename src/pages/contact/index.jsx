@@ -7,10 +7,8 @@ const Contact = () => {
     const { pageTitle, setTitle } = useContext(DataContext)
 
       useEffect(() => {
+        location.title = 'Info'
         setTitle(`${location.title} - ${pageTitle}`)
-        return () =>{
-          location.title = 'Info'
-        }
       }, [location.pathname])
 
   return (

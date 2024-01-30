@@ -7,10 +7,9 @@ const Gallery = () => {
   const { pageTitle, setTitle } = useContext(DataContext)
 
     useEffect(() => {
+      location.title = 'Gallery'
       setTitle(`${location.title} - ${pageTitle} `)
-      return () =>{
-        location.title = 'Gallery'
-      }
+
     }, [location.pathname])
 
   return (

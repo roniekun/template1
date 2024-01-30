@@ -7,11 +7,8 @@ const Notfound = () => {
   const { pageTitle, setTitle } = useContext(DataContext)
 
   useEffect(() => {
+        location.title = "URL | Error 404"
         setTitle(`${location.title}`)
-
-    return () =>{
-      location.title = "URL | Error 404"
-    }
   }, [location.pathname])
   
   return (

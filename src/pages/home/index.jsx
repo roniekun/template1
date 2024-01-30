@@ -14,10 +14,8 @@ const Home = () => {
   const { pageTitle, setTitle } = useContext(DataContext)
 
   useEffect(() => {
+    location.title = 'Freelance'
     setTitle(`${location.title} - ${pageTitle} `)
-    return () =>{
-      location.title = 'Freelance'
-    }
   }, [location.pathname])
 
 
