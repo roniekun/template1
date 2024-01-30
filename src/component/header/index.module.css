@@ -1,0 +1,44 @@
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    height: 5rem;
+    justify-content: flex-start;
+    padding-inline: 10%;
+    width: 100vw;
+    gap: 5%;
+    border-bottom: 1px solid whitesmoke;
+    top: 0;
+    
+
+    & h1{
+        font-size: 1.5rem;
+        color: black;
+    
+    }
+}
+
+@media(max-width: 1024px){
+    .container{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        height: 5rem;
+        padding-inline: 1%;
+        width: 100vw;
+        gap: 5%;
+        border-bottom: 1px solid whitesmoke;
+        top: 0;
+    
+
+    & h1{
+        font-size: 1.5rem;
+        color: black;
+    
+    }
+}
+
+
+}
