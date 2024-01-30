@@ -32,7 +32,7 @@ const Home = () => {
 
       <motion.section 
         ref={menu}
-        className='lg:fixed h-screen z-10 lg:w-1/3 left-0 flex items-center flex-col  justify-evenly'>
+        className='lg:fixed lg:w-1/3 left-0 h-screen md:h-[800px] sm:h-[800px] z-10  flex items-center flex-col  justify-evenly'>
         {isDesktop && <Logo/>}
        <div className='flex p-1 flex-col justify-start items-center gap-3 '>
         <Avatar />
