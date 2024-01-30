@@ -6,11 +6,6 @@ import { DataContext } from '../../context/DataContext'
 const Gallery = () => {
   const { pageTitle, setTitle } = useContext(DataContext)
 
-    useEffect(() => {
-      location.title = 'Gallery'
-      setTitle(`${location.title} - ${pageTitle} `)
-
-    }, [location.pathname])
 
   return (
     <main className={styles.container}>

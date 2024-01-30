@@ -29,7 +29,7 @@ const socialMediaLinks = [
   ];
 
   return (
-            <main className="gap-3 flex flex-wrap justify-center">
+            <main className="gap-3 flex flex-wrap justify-center m-2">
             {socialMediaLinks.map((link,index) => (
               <>
                 <a
