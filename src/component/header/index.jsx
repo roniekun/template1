@@ -15,7 +15,7 @@ const Header = () => {
   }, [location])
 
   return (
-    <main className='w-screen fixed z-30 top-0  justify-center items-center flex bg-white h-14 md:h-16 shadow-md'>
+    <main className='w-screen fixed z-30 top-0  justify-center items-center flex bg-transparent backdrop-blur-md h-14 md:h-16 shadow-md'>
      {!homeButton && <Logo/>}
     {homeButton && <Home />}
     <Menu />
