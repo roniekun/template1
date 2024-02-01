@@ -1,12 +1,12 @@
 import React from 'react'
-import Logo from './assets/Logo'
 import Avatar from './assets/Avatar'
+import Logo from './assets/Logo'
 import Socials from './assets/Socials'
 import Button from './assets/Button'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef, useEffect, useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
-import gsap from 'gsap'
+import Footer from '../../component/footer'
 
 const Home = () => {
 
@@ -52,6 +52,12 @@ const Home = () => {
           </div>
 
       </div>
+      </section>
+      <section className='sm:flex lg:grid grid-cols-3'>
+      <div></div>
+        <div className='col-span-2'>
+              <Footer />
+        </div>
       </section>
     </motion.main>
     

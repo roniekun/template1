@@ -6,7 +6,6 @@ import Home from "./pages/home";
 import Pricing from "./pages/pricing";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
-import Footer from "./component/footer";
 import Notfound from "./pages/Notfound";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
             <Route key="Notfound" path="*" element={<Notfound/>} />
           </Routes>
         </AnimatePresence>
-          <Footer />
         </main>
   );
 }
