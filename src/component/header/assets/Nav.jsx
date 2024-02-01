@@ -11,10 +11,13 @@ const Nav = () => {
 
     const handleClick = (link) => {
         navigate(link)
-        window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+         navigate(link)
+         setTimeout(() => {
+                    window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+         });
+         }, 500);
     }
 
     return (

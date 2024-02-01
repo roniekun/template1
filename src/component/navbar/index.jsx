@@ -36,20 +36,21 @@ const Navbar = () => {
         }
     }, [isToggleMenu]);
 
-
     const handleClick = (link) => {
         setToggleMenu(!isToggleMenu)
          navigate(link)
-        window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+         setTimeout(() => {
+                    window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+         });
+         }, 500);
     }
 
   return (
     <main
      ref={socials}
-     className='shadow-sm fixed rounded-md h-[300px] w-[200px] top-[70px] right-5 z-30 flex opacity-0 bg-gray-300'
+     className='shadow-sm fixed rounded-lg h-[300px] w-[200px] top-[70px] right-5 z-30 flex opacity-0 bg-gray-300'
     >
         <div 
         className='flex flex-col w-full items-center justify-center text-xl gap-5'

@@ -9,12 +9,15 @@ const Home = () => {
     const { setToggleMenu } = useContext(DataContext)
 
     const handleClick = () =>{
-        navigate('/')
-       window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-        setToggleMenu(false)
+         navigate('/')
+         setToggleMenu(false)
+         navigate(link)
+         setTimeout(() => {
+                    window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+         });
+         }, 500);
     }
   return (
     <button className='absolute left-5 text-[12px] text-black uppercase z-10 flex gap-1 items-center justify-center rounded-lg border border-gray-900 p-1 px-2'
