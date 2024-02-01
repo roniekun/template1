@@ -12,7 +12,7 @@ const Button = () => {
   return (
     <button
       onClick={handleClick}
-      className="uppercase text-xs hover:bg-sky-900 transition transform text-black active:bg-green-500 focus:outline-none focus:ring  focus:ring-offset-1  focus:ring-gray-300 hover:text-gray-50 border border-gray-900 rounded-md py-2 px-5">
+      className="uppercase text-xs hover:bg-sky-900 transition transform text-black active:bg-green-500 focus:outline-none focus:ring  focus:ring-offset-1 font-medium  focus:ring-gray-300 hover:text-gray-50 border border-gray-900 rounded-md py-2 px-5">
       Send Message
     </button>
   );

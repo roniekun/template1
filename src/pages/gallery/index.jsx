@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './index.module.css'
 import { useContext, useEffect } from 'react'
 import { DataContext } from '../../context/DataContext'
+import Footer from '../../component/footer'
 
 const Gallery = () => {
     const { user, setTitle } = useContext(DataContext)
@@ -13,8 +13,11 @@ const Gallery = () => {
 
 
   return (
-    <main className={styles.container}>
-      Gallery
+    <main className='min-h-screen'>
+        <div className='h-screen'></div>
+      <section>
+        <Footer />
+      </section>
     </main>
   )
 }

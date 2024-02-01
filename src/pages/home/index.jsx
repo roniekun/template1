@@ -55,7 +55,7 @@ const Home = () => {
       </section>
       <section className='sm:flex lg:grid grid-cols-3'>
       <div></div>
-        <div className='col-span-2'>
+        <div className='lg:col-span-2 sm:w-full'>
               <Footer />
         </div>
       </section>
