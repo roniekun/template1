@@ -37,10 +37,10 @@ const Navbar = () => {
   return (
     <main
      ref={links}
-     className='shadow-sm fixed rounded-md h-[300px] w-[250px] top-[70px] right-2 z-30 flex opacity-0 bg-slate-500'
+     className='shadow-sm fixed rounded-md h-[300px] w-[200px] top-[70px] right-5 z-30 flex opacity-0 bg-gray-300'
     >
         <div 
-        className='flex flex-col w-full items-center justify-center text-2xl gap-5'
+        className='flex flex-col w-full items-center justify-center text-xl gap-5 text-black'
         >
             <Link to='/'>
                 Home
