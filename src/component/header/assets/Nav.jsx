@@ -9,9 +9,11 @@ const Nav = () => {
     ];
 
     return (
-        <main className='flex uppercase text-sm text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-3'>
+        <main className='uppercase text-xs text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-3 flex items-center justify-center'>
             {links.map((link) => (
-                <Link key={link.name} to={link.to}>
+                <Link 
+                className='border p-1 px-2 rounded-md border-gray-900 '
+                key={link.name} to={link.to}>
                     {link.name} 
                 </Link>
             ))}
