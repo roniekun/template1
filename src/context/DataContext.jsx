@@ -8,9 +8,9 @@ const DataProvider = ({ children  }) => {
     const [isToggleMenu, setToggleMenu] = useState (false)
     const [isScrolled, setScrolled] = useState (false)
     const [currentScroll, setCurrentScroll] = useState(0)
-    const [isMobile, setMobile] = useState(window.innerWidth >= 600)
+    const [isMobile, setMobile] = useState(false)
     // const [isTablet, setTablet] = useState(window.innerWidth >= 768)
-    const [isDesktop, setDesktop] = useState(window.innerWidth >= 1024)
+    const [isDesktop, setDesktop] = useState(false)
 
     const user = {
       title: 'Ronie Benitez',
