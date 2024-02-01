@@ -24,7 +24,6 @@ const Navbar = () => {
             duration: 0.3,
             ease: 'power2.inOut',
             onComplete: () => {
-            // Animation is done, set display to "none" or your desired value
             links.current.style.display = 'none';
             },
         });

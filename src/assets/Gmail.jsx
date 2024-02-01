@@ -1,18 +1,10 @@
 import React from 'react';
 
-const Gmail = () => {
+const Gmail = (user) => {
 
-  // EMAIL CONFIG   // EMAIL CONFIG   // EMAIL CONFIG   // EMAIL CONFIG   // EMAIL CONFIG
-
-  const email = 'roniebenitez01@gmail.com';
-  const subject = 'Project Request';
-
-  const sendEmail = () => {
-    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    const mailtoUrl = `mailto:${user.email}?subject=${encodeURIComponent(user.subject)}`;
     window.location.href = mailtoUrl;
-  };
 
-  return sendEmail();
 }
 
 export default Gmail;

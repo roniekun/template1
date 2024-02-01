@@ -4,7 +4,12 @@ import { useContext, useEffect } from 'react'
 import { DataContext } from '../../context/DataContext'
 
 const Gallery = () => {
-  const { pageTitle, setTitle } = useContext(DataContext)
+    const { user, setTitle } = useContext(DataContext)
+
+      useEffect(() => {
+        location.title = 'Gallery'
+        setTitle(`${location.title} - ${user.title}`)
+      }, [location.pathname])
 
 
   return (

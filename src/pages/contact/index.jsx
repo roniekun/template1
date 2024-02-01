@@ -4,11 +4,11 @@ import { useEffect, useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 
 const Contact = () => {
-    const { pageTitle, setTitle } = useContext(DataContext)
+    const { user, setTitle } = useContext(DataContext)
 
       useEffect(() => {
         location.title = 'Info'
-        setTitle(`${location.title} - ${pageTitle}`)
+        setTitle(`${location.title} - ${user.title}`)
       }, [location.pathname])
 
   return (

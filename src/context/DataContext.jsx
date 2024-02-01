@@ -5,17 +5,43 @@ const DataProvider = ({ children  }) => {
 
     const [title, setTitle] = useState(document.title);
     const [isLoading, setLoading] = useState(true)
-    const [isToggleMenu, setToggleMenu] = useState (false);
+    const [isToggleMenu, setToggleMenu] = useState (false)
+    const [isScrolled, setScrolled] = useState (false)
+    const [currentScroll, setCurrentScroll] = useState(0)
     const [isMobile, setMobile] = useState(window.innerWidth >= 640)
     const [isTablet, setTablet] = useState(window.innerWidth >= 768)
     const [isDesktop, setDesktop] = useState(window.innerWidth >= 1024)
 
-    const pageTitle = 'Ronie Benitez'
-
+    const user = {
+      title: 'Ronie Benitez',
+      name: 'Ronie Benitez',
+      email: 'roniebenitez01@gmail.com',
+      subject: 'Project Request'
+    }
+    //dynamic document title
         useEffect(() => {
             document.title = title
         }, [title])
 
+      //scrolling listener
+        useEffect(() => {
+          const handleScroll = () => {
+              setScrolled(window.scrollY > currentScroll)
+              setCurrentScroll(window.scrollY)
+
+               console.log(currentScroll)
+              console.log(isScrolled)        
+          }
+
+          window.addEventListener('scroll', handleScroll)
+
+          return () => {
+           window.removeEventListener('scroll', handleScroll)
+          }
+        }, [scrollY,isScrolled])
+        
+
+      // responsive screen size
         useEffect(() => {
                   const handleResize = () => {
                     setMobile(window.innerWidth >= 640)
@@ -35,9 +61,10 @@ const DataProvider = ({ children  }) => {
   return (
     <DataContext.Provider 
       value={{
-              pageTitle,
+              user,
               title, setTitle,
               isLoading, setLoading, 
+              isScrolled,
               isMobile, setMobile,
               isTablet, setTablet,
               isDesktop, setDesktop,

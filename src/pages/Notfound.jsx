@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from 'react'
 import { DataContext } from '../context/DataContext'
 
 const Notfound = () => {
-  const { pageTitle, setTitle } = useContext(DataContext)
+  const { user, setTitle } = useContext(DataContext)
 
   useEffect(() => {
         location.title = "URL | Error 404"
