@@ -21,7 +21,7 @@ const Nav = () => {
     }
 
     return (
-        <main className='uppercase text-xs text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-3 flex items-center justify-center'>
+        <main className='bg-blend-difference uppercase text-xs text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-3 flex items-center justify-center'>
             {links.map((link) => (
                 <a
                 className='border p-1 px-2 rounded-md border-gray-900 cursor-pointer primary-font'

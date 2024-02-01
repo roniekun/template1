@@ -38,6 +38,8 @@ const Home = () => {
         className='lg:text-[2vw] font-semibold text-2xl text-center text-gray-900 primary-font'>
              Ronie Benitez
         </h2>
+        <h4 className='text-sm capitalize font-bold'>
+        front-end web developer</h4>
       
         <Button/>
         <Socials/>

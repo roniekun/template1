@@ -12,7 +12,7 @@ const Socials = ({footerStyles}) => {
         key={link.acn}>
           <a
             href={link.url}
-            className={`w-4 hover:scale-105 hover:opacity-85 transition fill-gray-900`}
+            className={`w-4 hover:scale-105 hover:opacity-85 transition fill-gray-900 bg-blend-difference`}
             key={link.name}
             target="_blank"
             rel="noopener noreferrer"

@@ -5,3 +5,9 @@
 .primary-font{
     font-family: 'Quilon', sans-serif ;
 }
+.hover-style{
+    color: black;
+}
+.hover-style:hover{
+    fill: whitesmoke
+}
