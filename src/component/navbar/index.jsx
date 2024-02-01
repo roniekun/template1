@@ -57,7 +57,7 @@ const Navbar = () => {
         >
                 {links.map((link) => (
                 <a
-                className='text-gray-800 cursor-pointer font-semibold capitalize'
+                className='text-gray-800 cursor-pointer font-semibold capitalize primary-font'
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 

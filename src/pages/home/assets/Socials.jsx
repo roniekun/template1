@@ -38,7 +38,7 @@ const socialMediaLinks = [
           <div className='flex justify-evenly gap-2 items-center text-sm' key={link.acn}>
             <a
               href={link.url}
-              className="uppercase text-black  hover:text-sky-900 hover:underline font-medium"
+              className="primary-font uppercase text-black  hover:text-sky-900 hover:underline font-medium"
               target="_blank"
               rel="noopener noreferrer">
               {link.acn} 

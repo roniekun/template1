@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary-font{
+    font-family: 'Quilon', sans-serif ;
+}
