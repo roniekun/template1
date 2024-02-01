@@ -6,14 +6,14 @@ import Home from "./pages/home";
 import Pricing from "./pages/pricing";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
+import Footer from "./component/footer";
 import Notfound from "./pages/Notfound";
 
 function App() {
   const location = useLocation();
 
   return (
-        <main className="bg-gray-100 flex flex-col" 
-        >
+        <main className="bg-gray-100 flex flex-col">
           <Header />
           <Navbar />
           <AnimatePresence mode="wait">
@@ -25,6 +25,7 @@ function App() {
             <Route key="Notfound" path="*" element={<Notfound/>} />
           </Routes>
         </AnimatePresence>
+          <Footer />
         </main>
   );
 }

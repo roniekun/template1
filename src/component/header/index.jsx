@@ -6,7 +6,7 @@ import { useState, useEffect,useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import Logo from './assets/Logo'
 import Nav from './assets/Nav'
-import Socials from './assets/Socials'
+import Socials from '../assets/Socials'
 import { motion } from 'framer-motion'
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{duration: .3}}
-    className={`w-screen opacity-0 fixed z-30 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent backdrop-blur-md h-14 md:h-16 bg-gradient-to-t from-transparent to-gray-300`}>
+    className={`w-screen opacity-0 fixed z-30 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent h-14 md:h-16 bg-gradient-to-t from-transparent to-gray-300`}>
       {homeButton ? <Home /> : <Logo/>}
       {isMobile ? <Menu /> : <Nav/>}
       {!isMobile && <Socials />}

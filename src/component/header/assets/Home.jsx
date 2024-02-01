@@ -10,6 +10,10 @@ const Home = () => {
 
     const handleClick = () =>{
         navigate('/')
+       window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
         setToggleMenu(false)
     }
   return (
