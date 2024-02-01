@@ -42,10 +42,6 @@ const Navbar = () => {
         <div 
         className='flex flex-col w-full items-center justify-center text-xl gap-5 text-black'
         >
-            <Link to='/'>
-                Home
-            </Link>
-        
             <Link to='/gallery' >
                 Gallery
             </Link>
