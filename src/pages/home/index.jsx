@@ -35,7 +35,7 @@ const Home = () => {
        <div className='flex p-1 flex-col justify-start items-center gap-3 '>
         <Avatar />
         <h2 
-        className='lg:text-[2vw]  text-2xl text-center text-gray-900'>
+        className='lg:text-[2vw] font-semibold text-2xl text-center text-gray-900'>
              Ronie Benitez
         </h2>
       

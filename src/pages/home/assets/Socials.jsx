@@ -35,10 +35,10 @@ const socialMediaLinks = [
   return (
       <main className="gap-2 flex flex-wrap w-full justify-center m-2">
         {socialMediaLinks.map((link, index) => (
-          <div className='flex justify-evenly gap-5' key={link.acn}>
+          <div className='flex justify-evenly gap-2 items-center text-sm' key={link.acn}>
             <a
               href={link.url}
-              className="uppercase text-black text-sm  hover:text-sky-900 hover:underline font-medium"
+              className="uppercase text-black  hover:text-sky-900 hover:underline font-medium"
               target="_blank"
               rel="noopener noreferrer">
               {link.acn} 
