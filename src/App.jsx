@@ -10,6 +10,7 @@ import Notfound from "./pages/Notfound";
 
 function App() {
   const location = useLocation();
+  alert('My website is in progress, Thanks for visiting.')
 
   return (
         <main className="bg-gray-100 flex flex-col">
