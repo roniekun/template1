@@ -35,7 +35,7 @@ const DataProvider = ({ children  }) => {
           return () => {
            window.removeEventListener('scroll', handleScroll)
           }
-        }, [isScrolled])
+        }, [window.scrollY])
         
 
       // responsive screen size
