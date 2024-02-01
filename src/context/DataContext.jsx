@@ -8,8 +8,8 @@ const DataProvider = ({ children  }) => {
     const [isToggleMenu, setToggleMenu] = useState (false)
     const [isScrolled, setScrolled] = useState (false)
     const [currentScroll, setCurrentScroll] = useState(0)
-    const [isMobile, setMobile] = useState(window.innerWidth <= 640)
-    const [isTablet, setTablet] = useState(window.innerWidth >= 768)
+    const [isMobile, setMobile] = useState(window.innerWidth >= 600)
+    // const [isTablet, setTablet] = useState(window.innerWidth >= 768)
     const [isDesktop, setDesktop] = useState(window.innerWidth >= 1024)
 
     const user = {
@@ -41,9 +41,8 @@ const DataProvider = ({ children  }) => {
       // responsive screen size
         useEffect(() => {
                   const handleResize = () => {
-                    setMobile(window.innerWidth >= 640)
-                    setTablet(window.innerWidth >= 768)
-                    setDesktop(window.innerWidth >= 10244)
+                    setMobile(window.innerWidth <= 640 && window.innerWidth < 1024 )
+                    setDesktop(window.innerWidth >= 1024)
                 }
 
                 handleResize();
@@ -63,7 +62,7 @@ const DataProvider = ({ children  }) => {
               isLoading, setLoading, 
               isScrolled,
               isMobile, setMobile,
-              isTablet, setTablet,
+              // isTablet, setTablet,
               isDesktop, setDesktop,
               setToggleMenu, isToggleMenu
               }}> 
