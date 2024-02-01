@@ -22,7 +22,7 @@ const Header = () => {
     <main className={`w-screen fixed z-30 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent backdrop-blur-md h-14 md:h-16 shadow-md`}>
      {!homeButton && <Logo/>}
     {homeButton && <Home />}
-    <Menu />
+     <Menu />
     </main>
   )
 }

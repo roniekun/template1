@@ -27,10 +27,7 @@ const DataProvider = ({ children  }) => {
         useEffect(() => {
           const handleScroll = () => {
               setScrolled(window.scrollY > currentScroll)
-              setCurrentScroll(window.scrollY)
-
-               console.log(currentScroll)
-              console.log(isScrolled)        
+              setCurrentScroll(window.scrollY)     
           }
 
           window.addEventListener('scroll', handleScroll)
@@ -38,7 +35,7 @@ const DataProvider = ({ children  }) => {
           return () => {
            window.removeEventListener('scroll', handleScroll)
           }
-        }, [scrollY,isScrolled])
+        }, [isScrolled])
         
 
       // responsive screen size

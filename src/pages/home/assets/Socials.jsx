@@ -34,17 +34,17 @@ const socialMediaLinks = [
 
   return (
       <main className="gap-3 flex flex-wrap w-full justify-center m-2">
-        {socialMediaLinks.map((index) => (
-          <div className='flex justify-evenly gap-5' key={index.acn}>
+        {socialMediaLinks.map((link, index) => (
+          <div className='flex justify-evenly gap-5' key={link.acn}>
             <a
-              href={index.url}
+              href={link.url}
               className="uppercase text-black hover:text-sky-900 hover:underline"
               target="_blank"
               rel="noopener noreferrer">
-              {index.acn} 
+              {link.acn} 
             </a>          
             {index !== socialMediaLinks.length - 1 ? 
-              <span  key={index.acn} className='text-black'>/</span> : null}
+              <span  key={index} className='text-black'>/</span> : null}
           </div>
         ))} 
       </main>
