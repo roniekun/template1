@@ -54,7 +54,7 @@ const Navbar = () => {
             <button
             onClick={()=>setToggleMenu(false)}
             className='w-5 group absolute top-5 left-5 cursor-pointer'>
-            <IoCloseSharp className='fill-white w-6 h-6 group-hover:opacity-90' /></button>
+            <IoCloseSharp className='fill-white w-7 h-7 group-hover:opacity-90' /></button>
                 {links.map((link) => (
                 <a
                 className='text-gray-50 cursor-pointer text-3xl font-bold capitalize primary-font'
