@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext, useRef, useEffect } from 'react'
 import { DataContext } from '../../../context/DataContext'
+import { CgMenuRight } from "react-icons/cg";
 import gsap from 'gsap'
 
 const Menu = () => {
@@ -28,12 +29,8 @@ const Menu = () => {
         <button 
         ref={btn}
         onClick={handleClick}
-        className='bg-blend-difference flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1  border border-gray-900 rounded-lg w-auto px-2'>
-        <div className='w-2 h-2 bg-slate-00 rounded-full'></div>
-        {isToggleMenu ?
-             <p className='w-12 primary-font'>Close</p>
-              : 
-             <p className='w-12 primary-font'>Menu</p>} 
+        className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2'> 
+            <CgMenuRight className='group-hover:opacity-70 w-5 h-5' />
         </button>
   )
 }
