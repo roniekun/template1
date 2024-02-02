@@ -19,15 +19,15 @@ const Header = () => {
   }, [location])
 
   return (
-    <motion.main 
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    transition={{duration: .3}}
-    className={`w-screen opacity-0 fixed z-10 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent h-14 md:h-16 ${isToggleMenu ? 'bg-gradient-to-t from-transparent to-transparent' : 'bg-gradient-to-t from-transparent to-gray-300'}`}>
-      {!isToggleMenu && (homeButton ? <Home /> : <Logo />)}
-      {isMobile ? <Menu /> : <Nav/>}
-      {!isMobile && <Socials />}
-    </motion.main>
+    <motion.header 
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{duration: .3}}
+        className={`w-screen opacity-0 fixed z-10 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent h-14 md:h-16 ${isToggleMenu ? 'bg-gradient-to-t from-transparent to-transparent' : 'bg-gradient-to-t from-transparent to-gray-300'}`}>
+          {!isToggleMenu && (homeButton ? <Home /> : <Logo />)}
+          {isMobile ? <Menu /> : <Nav/>}
+          {!isMobile && <Socials />}
+    </motion.header>
   )
 }
 
