@@ -6,7 +6,7 @@ import gsap from 'gsap'
 
 const Navbar = () => {
     const {setToggleMenu, isToggleMenu, isMobile} = useContext(DataContext)
-    const socials = useRef(null)
+    const menus = useRef(null)
     const navigate = useNavigate()
     const links = [
         { name: 'gallery', to: '/gallery' },
@@ -16,21 +16,21 @@ const Navbar = () => {
 
     useEffect(() => {
         if (isToggleMenu) {
-        gsap.to(socials.current, {
+        gsap.to(menus.current, {
             opacity: 1,
             duration: .3,
             ease: 'power2.in',
             onComplete: () => {
-            socials.current.style.display = 'flex';
+            menus.current.style.display = 'flex';
             },
         });
         } else {
-        gsap.to(socials.current, {
+        gsap.to(menus.current, {
             opacity: 0,
             duration: 0.3,
             ease: 'power2.inOut',
             onComplete: () => {
-            socials.current.style.display = 'none';
+            menus.current.style.display = 'none';
             },
         });
         }
@@ -49,15 +49,14 @@ const Navbar = () => {
 
   return (
     <main
-     ref={socials}
-     className='shadow-sm fixed rounded-lg h-[300px] w-[200px] top-[70px] right-5 z-30 flex opacity-0 bg-gray-300'
-    >
+     ref={menus}
+     className='shadow-sm fixed w-full h-full z-30 flex opacity-0 bg-black'>
         <div 
         className='flex flex-col w-full items-center justify-center text-xl gap-5'
         >
                 {links.map((link) => (
                 <a
-                className='text-gray-800 cursor-pointer font-semibold capitalize primary-font'
+                className='text-gray-50 cursor-pointer text-4xl font-bold uppercase primary-font'
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 

@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 
 const Header = () => {
   const [homeButton, setHomeButton] = useState(false)
-  const { isMobile, isScrolled } = useContext(DataContext)
+  const { isMobile, isScrolled, isToggleMenu } = useContext(DataContext)
   const location = useLocation()
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Header = () => {
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{duration: .3}}
-    className={`w-screen opacity-0 fixed z-30 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent h-14 md:h-16 bg-gradient-to-t from-transparent to-gray-300`}>
+    className={`w-screen opacity-0 fixed z-50 top-0 ${isScrolled ? 'transform -translate-y-full' : ''}  transition  justify-center items-center flex bg-transparent h-14 md:h-16 ${isToggleMenu ? 'bg-gradient-to-t from-transparent to-transparent' : 'bg-gradient-to-t from-transparent to-gray-300'}`}>
       {homeButton ? <Home /> : <Logo/>}
       {isMobile ? <Menu /> : <Nav/>}
       {!isMobile && <Socials />}
