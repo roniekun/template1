@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CUSTOM FONTS */
 .title-font{
-    font-family: 'Protest Revolution', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif ;
 }
 .primary-font{
-    font-family: 'Manrope', sans-serif ;
+    font-family: 'JetBrains Mono', sans-serif ;
+
 }
-.hover-style{
-    color: black;
-}
-.hover-style:hover{
-    fill: whitesmoke
+.secondary-font{
+    font-family: 'JetBrains Mono', sans-serif ;
 }

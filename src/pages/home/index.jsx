@@ -31,14 +31,13 @@ const Home = () => {
       <motion.section 
         ref={menu}
         className='lg:fixed lg:w-1/3 lg:left-0 h-screen md:h-[800px] sm:h-[800px]  lg:z-10 sm:z-0  flex items-center flex-col  justify-evenly'>
-        {isDesktop && <Logo/>}
        <div className='flex p-1 flex-col justify-start items-center gap-3 '>
         <Avatar />
         <h2 
-        className='lg:text-[2vw] font-semibold text-2xl text-center text-gray-900 primary-font'>
+        className='lg:text-[2vw] font-semibold text-2xl text-center text-gray-900 primary-font tracking-wide'>
              Ronie Benitez
         </h2>
-        <h4 className='text-sm capitalize font-bold'>
+        <h4 className='text-sm capitalize secondary-font tracking-tighter font-bold'>
         front-end web developer</h4>
       
         <Button/>

@@ -57,7 +57,7 @@ const Navbar = () => {
             <IoCloseSharp className='fill-gray-900 w-10 h-10 group-hover:opacity-90' /></button>
                 {links.map((link) => (
                 <a
-                className='text-gray-9000 cursor-pointer text-3xl font-bold capitalize title-font tracking-wide'
+                className='text-yellow-400 cursor-pointer text-3xl font-black capitalize title-font tracking-wide'
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 
