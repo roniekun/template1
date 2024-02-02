@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.title-font{
+    font-family: 'Protest Revolution', sans-serif;
+}
 .primary-font{
     font-family: 'Manrope', sans-serif ;
 }

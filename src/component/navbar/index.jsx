@@ -48,16 +48,16 @@ const Navbar = () => {
   return (
     <main
      ref={menus}
-     className='shadow-sm  z-50 fixed top-0 w-4/5 self-end h-full flex bg-black transfom translate-x-full'>
+     className='shadow-lg  z-50 fixed top-0 w-4/5 self-end h-full flex bg-gray-50 transfom translate-x-full'>
         <div 
         className='flex flex-col w-full items-center justify-center text-xl gap-5 h-full'>
             <button
             onClick={()=>setToggleMenu(false)}
             className='w-5 group absolute top-5 left-5 cursor-pointer'>
-            <IoCloseSharp className='fill-white w-7 h-7 group-hover:opacity-90' /></button>
+            <IoCloseSharp className='fill-gray-900 w-10 h-10 group-hover:opacity-90' /></button>
                 {links.map((link) => (
                 <a
-                className='text-gray-50 cursor-pointer text-3xl font-bold capitalize primary-font tracking-wide'
+                className='text-gray-9000 cursor-pointer text-3xl font-bold capitalize title-font tracking-wide'
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 
