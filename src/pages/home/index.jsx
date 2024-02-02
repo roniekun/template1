@@ -27,10 +27,10 @@ const Home = () => {
         animate={{opacity: 1, }}
         transition={{duration: 1}}
         exit={{opacity: 0}}
-        className='flex w-screen z-1 flex-col md:h-[calc(screen-64px)] sm:h-[calc(screen-56px)]'>
+        className='flex w-screen flex-col md:h-[calc(screen-64px)] sm:h-[calc(screen-56px)]'>
       <motion.section 
         ref={menu}
-        className='lg:fixed lg:w-1/3 lg:left-0 h-screen md:h-[800px] sm:h-[800px]  z-10  flex items-center flex-col  justify-evenly'>
+        className='lg:fixed lg:w-1/3 lg:left-0 h-screen md:h-[800px] sm:h-[800px]  lg:z-10 sm:z-0  flex items-center flex-col  justify-evenly'>
         {isDesktop && <Logo/>}
        <div className='flex p-1 flex-col justify-start items-center gap-3 '>
         <Avatar />

@@ -43,6 +43,7 @@ const DataProvider = ({ children  }) => {
                   const handleResize = () => {
                     setMobile(window.innerWidth <= 640 && window.innerWidth < 1024 )
                     setDesktop(window.innerWidth >= 1024)
+                    setToggleMenu(false)
                 }
 
                 handleResize();
