@@ -1,16 +1,15 @@
 import React from 'react'
 import Avatar from './assets/Avatar'
-import Logo from './assets/Logo'
 import Socials from './assets/Socials'
 import Button from './assets/Button'
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import Footer from '../../component/footer'
+import gsap from 'gsap'
 
 const Home = () => {
-
-  const { user, setTitle, isDesktop } = useContext(DataContext)
+  const { user, setTitle, isToggleMenu } = useContext(DataContext)
 
   useEffect(() => {
     location.title = 'Freelance'
@@ -19,12 +18,14 @@ const Home = () => {
 
 
   const menu = useRef(null)
+  const container = useRef(null)
 
   return (
       <motion.main 
+        ref={container}
         style={{opacity: 0}}
         initial={{opacity: 0}}
-        animate={{opacity: 1, }}
+        animate={{opacity: 1 }}
         transition={{duration: 1}}
         exit={{opacity: 0}}
         className='flex w-screen flex-col md:h-[calc(screen-64px)] sm:h-[calc(screen-56px)]'>
