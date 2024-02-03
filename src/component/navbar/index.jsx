@@ -41,6 +41,7 @@ const Navbar = () => {
         tl.to(linkItems.current, {
                         scale: 1.1,
                         duration: 1,
+                        rotate: -5,
                          ease: 'power2.in',
                          transformOrigin: '-5% -5%',
         },'-=.3')
@@ -50,11 +51,13 @@ const Navbar = () => {
             height:'0',
             clipPath:'polygon(0 0, 100% 0, 100% 49%, 0 16%)',
            onComplete: () =>{
-                 linkItems.current.style.opacity = 0;
+                linkItems.current.style.opacity = 0;
+                linkItems.current.style.transform = 'rotate(0deg) translateY(-50%)';
             }
-        },'-=.3')
+        },'-=.5')
              tl.to(linkItems.current, {
             scale: 1,
+            rotate: 0
              })
         }
 
@@ -77,7 +80,7 @@ const Navbar = () => {
      className='fixed w-screen flex bg-[#0a0a0a] h-0 overflow-hidden z-10'>
         <div 
             ref={linkItems}
-          className='flex flex-col w-full mx-[10vw] mt-[50vw]  justify-start items-start text-xl h-auto gap-7 opacity-0'>
+          className='flex flex-col w-full mx-[10vw] justify-center items-start text-xl h-auto gap-7 opacity-0'>
             
             {/* <button
             onClick={()=>setToggleMenu(false)}
