@@ -3,6 +3,8 @@ import { useContext, useRef, useEffect } from 'react'
 import { DataContext } from '../../../context/DataContext'
 import { CgMenuRight } from "react-icons/cg";
 import gsap from 'gsap'
+import { IoCloseSharp } from "react-icons/io5";
+
 
 const Menu = () => {
     const { setToggleMenu, isToggleMenu, isMobile } = useContext(DataContext)
@@ -27,7 +29,8 @@ const Menu = () => {
         ref={btn}
         onClick={handleClick}
         className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2'> 
-            <CgMenuRight className='group-hover:opacity-70 w-7 h-7' />
+        {isToggleMenu ? <IoCloseSharp className='group-hover:opacity-70 w-7 h-7' />  : 
+        <CgMenuRight className='group-hover:opacity-70 w-7 h-7' />}
         </button>
   )
 }

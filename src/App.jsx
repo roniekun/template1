@@ -21,7 +21,6 @@ function App() {
   
   return (
         <main className="bg-gray-100 flex flex-col">
-          {isToggleMenu && <Modal />}
           <Header />
           <Navbar />
           <AnimatePresence mode="wait">
