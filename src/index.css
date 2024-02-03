@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 /* CUSTOM FONTS */
-.title-font{
-  font-family: 'Plus Jakarta Sans', sans-serif ;
+body{
+  font-family: 'Averia Serif Libre', serif;
 }
-.primary-font{
-      font-family: 'Plus Jakarta Sans', sans-serif ;
-}
-.secondary-font{
-     font-family: 'Plus Jakarta Sans', sans-serif ;
-
-}
-

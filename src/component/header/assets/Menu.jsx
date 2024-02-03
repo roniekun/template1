@@ -29,8 +29,8 @@ const Menu = () => {
         ref={btn}
         onClick={handleClick}
         className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2'> 
-        {isToggleMenu ? <IoCloseSharp className='group-hover:opacity-70 w-7 h-7' />  : 
-        <CgMenuRight className='group-hover:opacity-70 w-7 h-7' />}
+        {isToggleMenu ? <IoCloseSharp className='opacity-70 group-hover:opacity-80 w-7 h-7' />  : 
+        <CgMenuRight className='opacity-90 group-hover:opacity-80 w-7 h-7' />}
         </button>
   )
 }
