@@ -33,22 +33,29 @@ const Navbar = () => {
              tl.to(linkItems.current, {
             opacity:1,
             ease: 'power2.in',
+            scale: 1
              },'+=.4',),
         )
         }
         else {
-         tl.to(linkItems.current, {
-            ease: 'power2.in',
-             }),
+        tl.to(linkItems.current, {
+                        scale: 1.1,
+                        duration: 1,
+                         ease: 'power2.in',
+                         transformOrigin: '-5% -5%',
+        },'-=.3')
 
         tl.to(menu.current, {
             ease: 'power2.inOut',
             height:'0',
             clipPath:'polygon(0 0, 100% 0, 100% 49%, 0 16%)',
-            onComplete: () =>{
+           onComplete: () =>{
                  linkItems.current.style.opacity = 0;
             }
-        })
+        },'-=.3')
+             tl.to(linkItems.current, {
+            scale: 1,
+             })
         }
 
     }, [isToggleMenu]);
@@ -84,7 +91,7 @@ const Navbar = () => {
                     key={link.name} 
                     onClick={() => handleClick(link.to)}>
                      {link.name} 
-                                    <span className="absolute -bottom-1 h-[2px] w-full  bg-gray-300  scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left"></span>
+                                    <span className="absolute -bottom-1 h-[3px] w-full  bg-gray-300 rounded-lg scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left"></span>
                     </a>
                  </div>
             ))}
