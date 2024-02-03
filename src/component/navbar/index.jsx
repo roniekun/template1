@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useContext, useRef, useEffect } from 'react'
 import { DataContext } from '../../context/DataContext'
 import gsap from 'gsap'
+import Socials from './assets/Socials'
 import { IoCloseSharp } from "react-icons/io5";
 import { Timeline } from 'gsap/gsap-core'
 
@@ -77,16 +78,18 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='fixed w-screen flex bg-[#0a0a0a] h-0 overflow-hidden z-10'>
-        <div 
-            ref={linkItems}
-          className='flex flex-col w-full mx-[10vw] justify-center items-start text-xl h-auto gap-7 opacity-0'>
-            
-            {/* <button
+     className='fixed w-screen flex bg-[#0a0a0a] h-0 flex-col items-start justify-evenly overflow-hidden z-10'>
+        <button
             onClick={()=>setToggleMenu(false)}
-            className='w-5 group absolute top-5 left-5 cursor-pointer'>
-            <IoCloseSharp className='fill-gray-900 w-10 h-10 group-hover:opacity-90'/></button> */}
+            className='group absolute z-10 top-5 right-[5vw] cursor-pointer text-gray-300 flex w-fit '>
+            <span className='text-lg group-hover:opacity-90'>Close</span> 
+            <IoCloseSharp className='fill-gray-300 w-7 h-7 relative group-hover:opacity-90'/>
+            </button> 
 
+        <section
+        ref={linkItems}
+          className='flex flex-col w-fit justify-center relative items-start text-xl h-auto gap-7 mx-[10vw] opacity-0'>
+        
                 {links.map((link, index) => (
                 <div className='flex w-fit justify-center relative items-center gap-5 group'>
                     <a
@@ -99,7 +102,8 @@ const Navbar = () => {
                  </div>
             ))}
 
-        </div>
+        </section>
+        <Socials navbarStyles={{position: 'relative', color: 'white', fill: 'white', right: '0'}} />
 
     </nav>
   )

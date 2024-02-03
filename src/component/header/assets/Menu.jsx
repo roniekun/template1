@@ -3,7 +3,7 @@ import { useContext, useRef, useEffect } from 'react'
 import { DataContext } from '../../../context/DataContext'
 import { CgMenuRight } from "react-icons/cg";
 import gsap from 'gsap'
-import { IoCloseSharp } from "react-icons/io5";
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 const Menu = () => {
@@ -25,13 +25,20 @@ const Menu = () => {
             setToggleMenu(!isToggleMenu)
         }
   return (
-        <button 
-        ref={btn}
-        onClick={handleClick}
-        className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2'> 
-        {isToggleMenu ? <IoCloseSharp className='opacity-70 group-hover:opacity-80 w-7 h-7' />  : 
-        <CgMenuRight className='opacity-90 group-hover:opacity-80 w-7 h-7' />}
-        </button>
+        <AnimatePresence>
+            {!isToggleMenu &&
+                <motion.button 
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: .3, delay: .5}}
+                ref={btn}
+                onClick={handleClick}
+                className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2 -z-10'> 
+       
+                <CgMenuRight className='opacity-90 group-hover:opacity-80 w-7 h-7' />
+                </motion.button>
+                }
+         </AnimatePresence>
   )
 }
 
