@@ -8,16 +8,9 @@ import Pricing from "./pages/pricing";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Notfound from "./pages/Notfound";
-import { useEffect, useContext } from "react";
-import { DataContext } from "./context/DataContext";
 
 function App() {
   const location = useLocation();
-  const { isToggleMenu } = useContext(DataContext)
-  // useEffect(() => {
-  //  alert('My website is in progress, Thanks for visiting.')
-    
-  // }, [])
   
   return (
         <main className="bg-gray-100 flex flex-col">

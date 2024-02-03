@@ -61,7 +61,7 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='shadow-lg absolute w-screen flex bg-[#0a0a0a] h-0 overflow-hidden'>
+     className='absolute w-screen flex bg-[#0a0a0a] h-0 overflow-hidden'>
         <div 
             ref={linkItems}
           className='flex flex-col w-full mx-[5vw]  justify-center items-start text-xl h-full  opacity-0'>
