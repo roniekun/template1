@@ -61,10 +61,10 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='absolute w-screen flex bg-[#0a0a0a] h-0 overflow-hidden'>
+     className='relative w-screen flex bg-[#0a0a0a] h-0 overflow-hidden z-10'>
         <div 
             ref={linkItems}
-          className='flex flex-col w-full mx-[5vw]  justify-center items-start text-xl h-full  opacity-0'>
+          className='flex flex-col w-full mx-[10vw]  justify-center items-start text-xl h-full gap-8 opacity-0'>
             
             {/* <button
             onClick={()=>setToggleMenu(false)}
@@ -72,14 +72,13 @@ const Navbar = () => {
             <IoCloseSharp className='fill-gray-900 w-10 h-10 group-hover:opacity-90'/></button> */}
 
                 {links.map((link, index) => (
-                <div className='flex w-fit justify-center relative items-cente h-[10vh] gap-5 group'>
-                <h3 className='text-md font-normal self-center text-gray-50 mx-5 h-[10vh]'>0{index+1}</h3> 
+                <div className='flex w-fit justify-center relative items-center gap-5 group'>
                     <a
-                    className='text-gray-50 z-10 relative bg-transparent cursor-pointer text-[6vw] font-bold capitalize title-font tracking-wide flex text-balance w-fit select-none'
+                    className='text-gray-300 z-10 relative bg-transparent cursor-pointer text-[9vh] font-md capitalize title-font flex text-balance h-[5vh] w-fit select-none'
                     key={link.name} 
                     onClick={() => handleClick(link.to)}>
                      {link.name} 
-                                            <span class="h-[2px] w-full absolute bottom-0  bg-gray-50 scale-0 transition-all duration-700 origin-left group-hover:scale-100"></span>
+                                            <span class="h-[2px] w-full absolute -bottom-2 bg-gray-50 scale-0 transition-all duration-700 origin-left group-hover:scale-100"></span>
                     </a>
                  </div>
             ))}
