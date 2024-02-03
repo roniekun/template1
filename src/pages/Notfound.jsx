@@ -14,11 +14,11 @@ const Notfound = () => {
   }, [location.pathname])
   
   return (
-    <main className='relative h-full w-screen flex justify-center items-center '>
-        <h1 className=' relative text-black lg:text-4xl font-bold text-center text-balance sm:text-2xl'> 
+    <main className='relative h-full w-screen flex flex-col justify-center items-center '>
+        <h1 className=' relative min-h-[800px] flex justify-center items-center text-black lg:text-4xl font-bold text-center text-balance sm:text-2xl'> 
             The page you're looking for can't be found. <br />
             Please check the URL.</h1>
-        <section>
+        <section className='w-full'>
           <Footer />
         </section>
     </main>
