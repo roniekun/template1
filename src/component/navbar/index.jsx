@@ -21,12 +21,14 @@ const Navbar = () => {
     useEffect(() => {
         gsap.registerPlugin(Timeline)
         const tl = gsap.timeline()
+    
         if (isToggleMenu) {
 
         tl.to(menu.current, {
-            duration: .5,
+             duration: .7,
             height: '100vh',
             ease: 'power2.in',
+             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
         }, 
              tl.to(linkItems.current, {
             opacity:1,
@@ -36,15 +38,19 @@ const Navbar = () => {
         }
         else {
          tl.to(linkItems.current, {
-            duration: .5,
-            opacity:0,
             ease: 'power2.in',
              }),
+
         tl.to(menu.current, {
             ease: 'power2.inOut',
             height:'0',
+            clipPath:'polygon(0 0, 100% 0, 100% 49%, 0 16%)',
+            onComplete: () =>{
+                 linkItems.current.style.opacity = 0;
+            }
         })
         }
+
     }, [isToggleMenu]);
 
     const handleClick = (link) => {
@@ -64,7 +70,7 @@ const Navbar = () => {
      className='fixed w-screen flex bg-[#0a0a0a] h-0 overflow-hidden z-10'>
         <div 
             ref={linkItems}
-          className='flex flex-col w-full mx-[10vw]  justify-center items-start text-xl h-full gap-7 opacity-0'>
+          className='flex flex-col w-full mx-[10vw] mt-[50vw]  justify-start items-start text-xl h-auto gap-7 opacity-0'>
             
             {/* <button
             onClick={()=>setToggleMenu(false)}
