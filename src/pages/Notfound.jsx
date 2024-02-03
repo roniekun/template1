@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { useEffect, useState, useContext } from 'react'
 import { DataContext } from '../context/DataContext'
 import Footer from '../component/footer'
+import PageAnimator from '../assets/anim/PageAnimator'
 
 const Notfound = () => {
   const { user, setTitle } = useContext(DataContext)
@@ -14,6 +15,7 @@ const Notfound = () => {
   }, [location.pathname])
   
   return (
+    <PageAnimator>
     <main className='relative h-full w-screen flex flex-col justify-center items-center '>
         <h1 className=' relative min-h-[800px] flex justify-center items-center text-black lg:text-4xl font-bold text-center text-balance sm:text-2xl'> 
             The page you're looking for can't be found. <br />
@@ -22,6 +24,7 @@ const Notfound = () => {
           <Footer />
         </section>
     </main>
+    </PageAnimator>
   )
 }
 

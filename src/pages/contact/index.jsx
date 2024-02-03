@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import Footer from '../../component/footer'
+import PageAnimator from '../../assets/anim/PageAnimator'
 
 const Contact = () => {
     const { user, setTitle } = useContext(DataContext)
@@ -12,12 +13,14 @@ const Contact = () => {
       }, [location.pathname])
 
   return (
-    <main className='min-h-screen'>
-      <div className='h-screen'></div>
-    <section>
-      <Footer />
-    </section>
-    </main>
+    <PageAnimator>
+      <main className='min-h-screen'>
+        <div className='h-screen'></div>
+      <section>
+        <Footer />
+      </section>
+      </main>
+    </PageAnimator>
   )
 }
 
