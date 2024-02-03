@@ -20,7 +20,7 @@ const Home = () => {
          }, 500);
     }
   return (
-    <button className='bg-blend-difference secondary-font absolute left-5 text-[12px] text-black uppercase z-10 flex gap-1 items-center justify-center rounded-lg border border-gray-900 p-1 px-2'
+    <button className='mix-blend-difference secondary-font absolute left-5 text-[12px] text-black uppercase z-10 flex gap-1 items-center justify-center rounded-lg border border-gray-900 p-1 px-2'
     onClick={handleClick}>
    <BackIcon className='w-5'/>
    return home

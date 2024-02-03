@@ -78,7 +78,7 @@ const Navbar = () => {
                     key={link.name} 
                     onClick={() => handleClick(link.to)}>
                      {link.name} 
-                                            <span class="h-[2px] w-full absolute -bottom-2 bg-gray-50 scale-0 transition-all duration-700 origin-left group-hover:scale-100"></span>
+                                    <span className="absolute -bottom-1 h-[2px] w-full  bg-gray-200 scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left"></span>
                     </a>
                  </div>
             ))}
