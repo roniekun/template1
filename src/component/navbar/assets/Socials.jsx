@@ -1,7 +1,21 @@
-import React from 'react';
+import {forwardRef ,useRef, useEffect, useImperativeHandle, useContext} from 'react';
 import {linksData } from '../utils/linksData';
+import gsap from 'gsap';
+import { DataContext } from '../../../context/DataContext';
 
-const Socials = () => {
+const Socials = forwardRef((props, ref) => {
+    const { isToggleMenu } = useContext(DataContext)
+    const socialRefs = useRef([]);
+
+    // Expose the refs to the parent (Navbar) component
+    useImperativeHandle(ref, () => ({
+        socialRefs: socialRefs.current,
+    }), [socialRefs]);
+
+    useEffect(() => {
+        gsap.fromTo(socialRefs.current, { opacity: 0,  }, 
+        {opacity: 1, delay: .5, stagger: 0.1, duration: 0.3});
+    }, [socialRefs, isToggleMenu]);
 
   return (
   <main 
@@ -10,8 +24,9 @@ const Socials = () => {
         <div className="flex justify-evenly gap-5" 
         key={link.acn}>
           <a
+           ref={(el) => (socialRefs.current[index] = el)}
             href={link.url}
-            className={` hover:opacity-90 over:opacity-85 transition text-gray-300 bg-blend-difference`}
+            className={` hover:opacity-90 over:opacity-85 transition text-gray-300 bg-blend-difference opacity-0`}
             key={link.name}
             target="_blank"
             rel="noopener noreferrer"
@@ -22,6 +37,6 @@ const Socials = () => {
       ))}
     </main>
   );
-};
+});
 
 export default Socials;

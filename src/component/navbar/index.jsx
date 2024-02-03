@@ -11,6 +11,7 @@ const Navbar = () => {
     const {setToggleMenu, isToggleMenu} = useContext(DataContext)
     const menu = useRef(null)
     const linkItems= useRef(null)
+    const socialsRef = useRef(null);  
     const navigate = useNavigate()
 
     const links = [
@@ -104,7 +105,7 @@ const Navbar = () => {
 
         </section>
     <section>
-            <Socials  />
+            <Socials ref={socialsRef} /> 
     </section>
 
     </nav>
