@@ -27,7 +27,7 @@ const Navbar = () => {
         tl.to(menu.current, {
              duration: .7,
             height: '100vh',
-            ease: 'power2.in',
+            ease: 'power1.in',
              clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
         }, 
              tl.to(linkItems.current, {
