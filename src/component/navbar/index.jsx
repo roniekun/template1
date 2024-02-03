@@ -103,7 +103,9 @@ const Navbar = () => {
             ))}
 
         </section>
-        <Socials navbarStyles={{position: 'relative', color: 'white', fill: 'white', right: '0'}} />
+    <section>
+            <Socials  />
+    </section>
 
     </nav>
   )

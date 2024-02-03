@@ -2,7 +2,6 @@ import React from 'react';
 import Gmail from '../../../assets/Gmail';
 import { useContext } from 'react';
 import { DataContext } from '../../../context/DataContext';
-// import MessageIcon from './svg/send-1.svg?react'
 import { TbSend } from "react-icons/tb";
 
 const Button = () => {

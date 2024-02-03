@@ -1,7 +1,7 @@
-import Facebook from '../svg/facebook-2.svg?react';
-import Instagram from '../svg/instagram.svg?react';
-import LinkedIn from '../svg/linkedin-1.svg?react';
-import Github from '../svg/github.svg?react';
+import Facebook from './svg/facebook-2.svg?react';
+import Instagram from './svg/instagram.svg?react';
+import LinkedIn from './svg/linkedin-1.svg?react';
+import Github from './svg/github.svg?react';
 
 export const linksData = [
   {

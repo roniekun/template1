@@ -26,7 +26,7 @@ const socialMediaLinks = [
      },
 
     { name: 'LinkedIn', 
-      acn: 'li',
+      acn: 'in',
       fill: '#E4405F', 
       url: 'https://www.linkedin.com/in/roniebenitez', 
       userhandle: '' },
