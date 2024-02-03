@@ -74,7 +74,7 @@ const Navbar = () => {
                 {links.map((link, index) => (
                 <div className='flex w-fit justify-center relative items-center gap-5 group'>
                     <a
-                    className='text-gray-300 z-10 relative bg-transparent cursor-pointer text-[9vh] font-md capitalize title-font flex text-balance h-[5vh] w-fit select-none'
+                    className='text-gray-300 z-10 relative bg-transparent cursor-pointer text-[7vh] font-md capitalize title-font flex text-balance h-[5vh] w-fit select-none'
                     key={link.name} 
                     onClick={() => handleClick(link.to)}>
                      {link.name} 
