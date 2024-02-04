@@ -8,6 +8,7 @@ import Logo from './assets/Logo'
 import Nav from './assets/Nav'
 import Socials from '../assets/Socials'
 import { motion } from 'framer-motion'
+import Note from './assets/Note'
 
 const Header = () => {
   const [homeButton, setHomeButton] = useState(false)
@@ -19,16 +20,21 @@ const Header = () => {
   }, [location])
 
   return (
-    <motion.header 
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: .3, delay: .7}}
-        className={`w-screen opacity-0 fixed z-10 top-0 ${isScrolled ? 'transform bg-blend-difference -translate-y-full' : ''}  transition  justify-end items-center flex bg-transparent  h-14 md:h-16`}>
-         {/* ${isToggleMenu ? 'bg-gradient-to-t from-transparent to-transparent' : 'bg-gradient-to-t from-transparent to-gray-300'} */}
-         {homeButton ? <Home /> : <Logo />}
-        { !isToggleMenu && (isMobile ? <Menu /> : <Nav/>)}
-          {!isMobile && <Socials />}
-    </motion.header>
+    <header
+          className={`w-screen  z-10 top-0 transition flex bg-transparent flex-col fixed`}>
+        <section className='sticky top-0 z-10'>
+          <Note />
+        </section>
+        <motion.section
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: .3, delay: .7}}
+            className={`flex relative justify-end items-center w-screen  h-14 md:h-16 opacity-0  z-0 ${isScrolled ? 'transform -translate-y-full' : ''}`}>
+              {homeButton ? <Home /> : <Logo />}
+            { !isToggleMenu && (isMobile ? <Menu /> : <Nav/>)}
+              {!isMobile && <Socials />}
+        </motion.section>
+    </header>
   )
 }
 
