@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const Menu = () => {
-    const { setToggleMenu, isToggleMenu, isMobile } = useContext(DataContext)
+    const { setToggleMenu, isToggleMenu } = useContext(DataContext)
     const btn = useRef()
 
         useEffect(() => {
@@ -26,8 +26,7 @@ const Menu = () => {
         }
   return (
         <AnimatePresence>
-            {!isToggleMenu &&
-                <motion.button 
+            <motion.button 
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{duration: .3, delay: .5}}
@@ -37,7 +36,6 @@ const Menu = () => {
        
                 <CgMenuRight className='opacity-90 group-hover:opacity-80 w-7 h-7' />
                 </motion.button>
-                }
          </AnimatePresence>
   )
 }
