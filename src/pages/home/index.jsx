@@ -25,16 +25,9 @@ const Home = () => {
         className='bg-gray-100 flex w-screen flex-col md:h-[calc(screen-64px)] sm:h-[calc(screen-56px)]'>
       <motion.section 
         ref={menu}
-        className='lg:fixed lg:w-1/3 lg:left-0 h-screen md:h-[800px] sm:h-[800px]   flex items-center flex-col  justify-evenly'>
-       <div className='flex p-1 flex-col justify-start items-center gap-3 '>
+        className='lg:fixed lg:z-10 lg:w-1/3 lg:left-0  h-screen md:h-[800px] sm:h-[800px]  flex items-center flex-col  justify-evenly'>
+       <div className='flex p-1 flex-col justify-start items-center gap-3'>
         <Avatar />
-        <h2 
-        className='lg:text-[2vw] font-semibold text-2xl text-center text-gray-900 primary-font tracking-wide'>
-             Ronie Benitez
-        </h2>
-        <h4 className='text-sm capitalize secondary-font tracking-tighter font-bold'>
-        front-end web developer</h4>
-      
         <Button/>
         <Socials/>
        </div>
@@ -49,6 +42,8 @@ const Home = () => {
 
       </div>
       </section>
+      
+      {/* footer */}
       <section className='sm:flex lg:grid grid-cols-3'>
       <div></div>
         <div className='lg:col-span-2 sm:w-full'>
