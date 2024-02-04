@@ -29,7 +29,7 @@ function App() {
         <main className="bg-gray-100 flex flex-col">
           <Header />
           <Navbar />
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
           <Routes location={location} key={location.key}>
             <Route key="home" exact path="/" element={<Home />} />
             <Route key="pricing" exact path="/pricing" element={<Pricing />} />

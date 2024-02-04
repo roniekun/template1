@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const PageAnimator = ({children}) => {
+export default function PageAnimator({children}) {
    
     const anim = (variants) => {
       return {
@@ -18,46 +18,57 @@ const PageAnimator = ({children}) => {
        },
        enter: {
           opacity: 1,
-           transition:{
-             duration: .3,
-           }
        },
        leave:{
-        opacity: 0,
-        transition:{
-          duration: .3,
-        }
+          opacity: 1
        }
     }
-      const translate = {
+      const slide = {
        start: {
-         y: '100vh',
+         top: '100vh',
        },
        enter: {
-          y: 0,
-           transition:{
-             duration: .3,
-           }
+          top: "100vh",
        },
        leave:{
-        scale: 0.9,
-        y: '-100vh',
-        transition:{
-          duration: .3,
+        top: "0",
+        transition: {
+          duration: 1,
+          ease: [0.76, 0, 0.24, 1]
+        }
+       }
+      }
+       const perspective = {
+       start: {
+         y:  0,
+         scale: 1,
+         opacity: 1
+       },
+       enter: {
+        y:  0,
+        scale: 1,
+         opacity: 1
+       },
+       leave:{
+            y: -100,
+            scale: 0.9,
+            opacity: .5,
+            transition:{
+            duration: 1.2,
+            ease: [0.76, 0, 0.24, 1]
         }
        }
     }
 
-  return (
-    <motion.main 
-     {...anim(opacity)}
-      className='bg-black'>
-      <motion.div
-        className='bg-gray-50'>
-        { children }
-      </motion.div>
-    </motion.main>
-  )
+    return (
+        <main className='bg-black' >
+            <motion.div  {...anim(slide)}
+              className='fixed top-0 left-0 w-screen h-screen bg-gray-100 z-10'/>
+              <motion.div {...anim(perspective)}>
+                  <motion.div {...anim(opacity)}>
+                      { children }
+                  </motion.div>
+              </motion.div>
+        </main>
+    )
 }
-
-export default PageAnimator
