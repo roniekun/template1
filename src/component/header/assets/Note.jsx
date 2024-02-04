@@ -9,23 +9,26 @@ const Note = () => {
     const text1 = useRef(null);
     const text2 = useRef(null);
 
-    useEffect(() => {
+      useEffect(() => {
+        if(active){
+        gsap.to(container.current,{
+            height: 'auto'
+        })
+         }
+         else{
+             gsap.to(container.current,{
+            height: '0'
+          })
+         }
         setTimeout(() => {
             setActive(false)
-        }, 15000);
-      
-         if(!active){
-        gsap.to(container.current,{
-            height: 0
-        })
-            }
+        }, 20000);
+
     }, [active])
 
     useEffect( () => {
-
-    let xPercent = 0;
-
-    // animation frame
+      let xPercent = 0;
+        // animation frame
             const animate1 = () => {
                 if (xPercent > 0) {
                     xPercent = -100;
@@ -35,16 +38,13 @@ const Note = () => {
                 requestAnimationFrame(animate1);
                 xPercent += 0.07;
             };
-
-        if(active){
             gsap.set(text1.current, {left: text2.current.getBoundingClientRect().width})
             requestAnimationFrame(animate1);
-        }  
-    }, [ active ])
+    }, [ ])
 
 
   return (
-    <main ref={container} className='w-auto h-10 bg-yellow-500 relative overflow-hidden'>
+    <main ref={container} className='w-auto h-auto bg-yellow-500 z-20 relative overflow-hidden'>
         <div ref={slider} className='w-full flex h-full place-items-center' >
             <div className='flex h-auto text-nowrap text-xl w-full uppercase'>
                 <h1 ref={text1} className='relative flex gap-x-24  px-12'>

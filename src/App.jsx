@@ -1,7 +1,5 @@
 import {  Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Modal from "./component/modal";
-import Header from "./component/header";
 import Navbar from "./component/navbar";
 import Home from "./pages/home";
 import Pricing from "./pages/pricing";
@@ -27,7 +25,6 @@ function App() {
   
   return (
         <main className="bg-gray-100 flex flex-col">
-          <Header />
           <Navbar />
           <AnimatePresence>
           <Routes location={location} key={location.key}>

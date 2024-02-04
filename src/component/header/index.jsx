@@ -21,10 +21,7 @@ const Header = () => {
 
   return (
     <header
-          className={`w-screen  z-10 top-0 transition flex bg-transparent flex-col fixed`}>
-        <section className='sticky top-0 z-10'>
-          <Note />
-        </section>
+          className={`w-screen  top-0 transition flex bg-transparent  flex-col relative z-10`}>
         <motion.section
             initial={{opacity: 0}}
             animate={{opacity: 1}}

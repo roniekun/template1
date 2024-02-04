@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Note from '../../component/header/assets/Note'
+import Header from '../../component/header'
 
 export default function PageAnimator({children}) {
    
@@ -61,14 +63,20 @@ export default function PageAnimator({children}) {
     }
 
     return (
-        <main className='bg-black' >
+        <motion.main 
+
+        className='bg-black' >
             <motion.div  {...anim(slide)}
-              className='fixed top-0 left-0 w-screen h-screen bg-gray-100 z-10'/>
+              className='fixed top-0 left-0 w-screen h-screen bg-gray-100 z-20'/>
               <motion.div {...anim(perspective)}>
+                <section className='top-0 z-10 fixed'>
+                      <Note />
+                      <Header />
+                  </section>
                   <motion.div {...anim(opacity)}>
                       { children }
                   </motion.div>
               </motion.div>
-        </main>
+        </motion.main>
     )
 }

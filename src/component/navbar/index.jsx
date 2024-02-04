@@ -79,7 +79,7 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='fixed w-screen flex bg-[#0a0a0a] h-0 flex-col items-start justify-evenly overflow-hidden z-10'>
+     className='fixed w-screen flex bg-[#0a0a0a] h-0 flex-col items-start justify-evenly overflow-hidden z-50'>
         <button
             onClick={()=>setToggleMenu(false)}
             className='group absolute z-10 top-5 right-[5vw] cursor-pointer text-gray-300 flex w-fit '>
