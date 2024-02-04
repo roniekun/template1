@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { motion } from 'framer-motion';
 
 const Note = () => {
     const [ active, setActive ] = useState(true)
@@ -44,7 +45,11 @@ const Note = () => {
 
 
   return (
-    <main ref={container} className='w-auto h-auto bg-yellow-500 z-20 relative overflow-hidden'>
+    <motion.main 
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{duration: .3, delay: .3}}
+     ref={container} className='w-auto h-auto bg-yellow-500 z-20 relative overflow-hidden'>
         <div ref={slider} className='w-full flex h-full place-items-center' >
             <div className='flex h-auto text-nowrap text-xl w-full uppercase'>
                 <h1 ref={text1} className='relative flex gap-x-24  px-12'>
@@ -62,7 +67,7 @@ const Note = () => {
                    </h1>
             </div>
         </div>
-    </main>
+    </motion.main>
   )
 }
 
