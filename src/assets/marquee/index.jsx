@@ -1,16 +1,16 @@
 import React from 'react'
-import { useState, useEffect, useRef } from 'react';
+import { useState, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 
-const Note = () => {
+const Marquee = () => {
     const [ active, setActive ] = useState(true)
     const container = useRef(null);
     const slider = useRef(null);
     const text1 = useRef(null);
     const text2 = useRef(null);
 
-      useEffect(() => {
+      useLayoutEffect(() => {
         if(active){
         gsap.to(container.current,{
             height: 'auto'
@@ -27,7 +27,7 @@ const Note = () => {
 
     }, [active])
 
-    useEffect( () => {
+    useLayoutEffect( () => {
       let xPercent = 0;
         // animation frame
             const animate1 = () => {
@@ -71,4 +71,4 @@ const Note = () => {
   )
 }
 
-export default Note
+export default Marquee

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { useRef, useEffect, useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import Footer from '../../component/footer'
-import PageAnimator from '../../assets/anim/PageAnimator'
+import PageAnimator from '../../assets/anim/PageTransition'
 
 const Home = () => {
   const { user, setTitle } = useContext(DataContext)

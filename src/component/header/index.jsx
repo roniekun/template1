@@ -8,7 +8,7 @@ import Logo from './assets/Logo'
 import Nav from './assets/Nav'
 import Socials from '../assets/Socials'
 import { motion } from 'framer-motion'
-import Note from './assets/Note'
+import Note from '../../assets/marquee'
 
 const Header = () => {
   const [homeButton, setHomeButton] = useState(false)

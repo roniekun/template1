@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { useEffect, useState, useContext } from 'react'
 import { DataContext } from '../context/DataContext'
 import Footer from '../component/footer'
-import PageAnimator from '../assets/anim/PageAnimator'
+import PageAnimator from '../assets/anim/PageTransition'
 
 const Notfound = () => {
   const { user, setTitle } = useContext(DataContext)

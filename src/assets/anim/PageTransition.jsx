@@ -1,10 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Note from '../../component/header/assets/Note'
 import Header from '../../component/header'
+import Marquee from '../marquee'
 
-export default function PageAnimator({children}) {
-   
+export default function PageTransition({children}) {
+    
     const anim = (variants) => {
       return {
         initial: 'start',
@@ -70,7 +70,7 @@ export default function PageAnimator({children}) {
               className='fixed top-0 left-0 w-screen h-screen bg-gray-100 z-20'/>
               <motion.div {...anim(perspective)}>
                 <section className='top-0 z-10 fixed'>
-                      <Note />
+                      <Marquee />
                       <Header />
                   </section>
                   <motion.div {...anim(opacity)}>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext, useEffect } from 'react'
 import { DataContext } from '../../context/DataContext'
 import Footer from '../../component/footer'
-import PageAnimator from '../../assets/anim/PageAnimator'
+import PageAnimator from '../../assets/anim/PageTransition'
 
 const Gallery = () => {
     const { user, setTitle } = useContext(DataContext)
