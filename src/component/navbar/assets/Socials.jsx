@@ -21,12 +21,12 @@ const Socials = forwardRef((props, ref) => {
   <main 
     className="gap-x-5 gap-y-3 flex flex-wrap  relative mx-[10vw]">
       {linksData.map((link, index) => (
-        <div className="flex justify-evenly gap-5" 
+        <div className="flex justify-evenly group" 
         key={link.acn}>
           <a
            ref={(el) => (socialRefs.current[index] = el)}
             href={link.url}
-            className={` hover:opacity-90 over:opacity-85 transition text-gray-300 bg-blend-difference opacity-0`}
+            className={` hover:opacity-90 over:opacity-85 transition group-hover:-translate-y-1 text-gray-300 bg-blend-difference opacity-0 uppercasexl px-2`}
             key={link.name}
             target="_blank"
             rel="noopener noreferrer"

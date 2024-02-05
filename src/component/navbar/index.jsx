@@ -97,13 +97,12 @@ const Navbar = () => {
             <Clock />
             </motion.section>
 
-
         <section
         ref={linkItems}
           className='flex flex-col w-fit justify-center relative items-start text-xl h-auto gap-7 mx-[10vw] opacity-0'>
         
                 {links.map((link, index) => (
-                <div className='flex w-fit justify-center relative items-center gap-5 group'>
+                <div className='flex w-fit justify-center relative items-center gap-5 group '>
                     <a
                     className='text-gray-300 z-10 relative bg-transparent cursor-pointer text-[7vh] font-md capitalize title-font flex text-balance h-[5vh] w-fit select-none'
                     key={link.name} 
