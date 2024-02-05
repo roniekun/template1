@@ -5,7 +5,7 @@ import { DataContext } from '../../context/DataContext'
 import gsap from 'gsap'
 import Socials from './assets/Socials'
 import Clock from './assets/Clock'
-import { IoCloseSharp } from "react-icons/io5";
+import Close from './assets/Close'
 import { Timeline } from 'gsap/gsap-core'
 import { motion } from 'framer-motion'
 
@@ -27,7 +27,7 @@ const Navbar = () => {
         const tl = gsap.timeline()
     
         if (isToggleMenu) {
-
+         document.body.style.overflow = 'hidden'
         tl.to(menu.current, {
              duration: .7,
             height: '100vh',
@@ -42,6 +42,7 @@ const Navbar = () => {
         )
         }
         else {
+         document.body.style.overflow = 'scroll'
         tl.to(linkItems.current, {
                         scale: 1.1,
                         duration: 1,
@@ -81,13 +82,11 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='fixed w-screen flex bg-[#0a0a0a] h-0 flex-col items-start justify-around  overflow-hidden z-50'>
-        <button
-            onClick={()=>setToggleMenu(false)}
-            className='group absolute z-10 top-5 right-[5vw] cursor-pointer text-gray-300 flex w-fit '>
-            <span className='text-lg group-hover:opacity-90'>Close</span> 
-            <IoCloseSharp className='fill-gray-300 w-7 h-7 relative group-hover:opacity-90'/>
-            </button> 
+     className='fixed w-screen flex bg-opacity-50 bg-black h-0 backdrop-blur-md flex-col items-start justify-around  overflow-hidden z-50'>
+
+            <section className='absolute z-10 top-[3vw] right-[3vw]'>
+                <Close />
+            </section>
 
             <motion.section
             initial={{ opacity: 0 }}
@@ -98,17 +97,17 @@ const Navbar = () => {
             </motion.section>
 
         <section
-        ref={linkItems}
+          ref={linkItems}
           className='flex flex-col w-fit justify-center relative items-start text-xl h-auto gap-7 mx-[10vw] opacity-0'>
         
                 {links.map((link, index) => (
                 <div className='flex w-fit justify-center relative items-center gap-5 group '>
                     <a
-                    className='text-gray-300 z-10 relative bg-transparent cursor-pointer text-[7vh] font-md capitalize title-font flex text-balance h-[5vh] w-fit select-none'
+                    className={`text-gray-50 z-10 relative bg-transparent cursor-pointer text-[7vh] font-md capitalize title-font flex text-balance h-[5vh] w-fit select-none ${link.to===location.pathname ? 'text-orange-500' : 'text-gray-50'} `}
                     key={link.name} 
                     onClick={() => handleClick(link.to)}>
                      {link.name} 
-                                    <span className="absolute -bottom-1 h-[3px] w-full  bg-gray-300 rounded-lg scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left"></span>
+                                    <span className={`absolute -bottom-1 h-[3px] w-full  ${link.to===location.pathname ? 'bg-orange-500' : 'bg-gray-100'} rounded-lg scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left`}></span>
                     </a>
                  </div>
             ))}
