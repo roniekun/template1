@@ -23,7 +23,10 @@ const Gallery = () => {
     <main className='min-h-screen bg-gray-100'>
         <div className='h-screen flex place-items-center justify-center'>
          { isValid ?  
+         <div className='h-full w-full flex flex-col justify-center items-center'>
           <h1 className='text-3xl'> Featured Posts {id}</h1>
+          <p>Display grid of images*</p>
+         </div>
           :
           <Invalid/> 
           }

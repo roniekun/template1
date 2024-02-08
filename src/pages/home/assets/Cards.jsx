@@ -1,9 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { cardData } from '../utils/cardData'
 
 const Cards = () => {
   const navigate = useNavigate()
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleClick =(index)=>{
     navigate(`/gallery/${index+1}/`)
@@ -11,13 +12,16 @@ const Cards = () => {
            window.scrollTo({top: 0})
     });
   }
+
   return (
-    <main  className='space-y-5 relative lg:grid lg:grid-cols-2 sm:grid-cols-2 place-items-center h-auto lg:gap-10  lg:space-y-0 md:space-y-5 sm:space-y-5'>
+    <main  className='space-y-5 relative lg:grid lg:grid-cols-2 sm:grid-cols-2 place-items-center h-auto lg:gap-10  lg:space-y-0 md:space-y-5 sm:space-y-5 group'>
     {cardData.map((card, index)=>( 
     <div key={index}
         onClick={()=>handleClick(index)}
-         className='flex group  flex-col w-full h-[600px] lg:w-[45vw] lg:h-[800px] md:h-[800px] gap-5 relative border border-black  cursor-pointer'>
-        <img className='lg:w-11/12 w-full h-5/6 relative border group-hover:shadow-xl border-zinc-400 self-center object-cover' 
+          onMouseEnter={() => setHoveredItem(index)}
+          onMouseLeave={() => setHoveredItem(null)}
+         className={`flex group  flex-col w-full h-[600px] lg:w-[45vw] lg:h-[800px] md:h-[800px]  ${hoveredItem !== index ? 'group-hover:contrast-50': ''} gap-5 relative border contrast-100 border-black  cursor-pointer`}>
+        <img className='lg:w-11/12 w-full h-5/6 relative border border-zinc-400 self-center object-cover mt-2' 
         src="" alt="thumbnail" />
         <div className='px-[2vw]'>
          <h1 className='text-lg capitalize text-zinc-900'>
