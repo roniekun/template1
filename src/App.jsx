@@ -32,10 +32,11 @@ function App() {
           <AnimatePresence mode="wait">
           <Routes location={location} key={location.key}>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<Pricing />} />
-            <Route exact path="/work/" element={<Gallery />} />
+            <Route exact path="/pricing" element={<Pricing />} />
+            <Route exact path="/gallery" element={<Gallery />} />
             <Route exact path="/gallery/:id" element={<Gallery />} />
-            <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/about" element={<Contact />} />
+             <Route exact path="/contact" element={<Contact />} />
             <Route  path="*" element={<Notfound/>} />
           </Routes>
         </AnimatePresence>
