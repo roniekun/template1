@@ -21,7 +21,7 @@ export default {
       },
       transitionDelay:{
         'ease-in-out-quart': 'cubic-bezier(0.76, 0, 0.24, 1)',
-         'ease-in-out-expo': 'cubic-bezier(0.87, 0, 0.13, 1)',
+        'ease-in-out-expo': 'cubic-bezier(0.87, 0, 0.13, 1)',
       }
     },
     variants: {

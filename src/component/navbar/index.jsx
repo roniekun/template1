@@ -83,19 +83,11 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='fixed w-screen flex bg-opacity-50 bg-black h-0 backdrop-blur-md flex-col items-start justify-around  overflow-hidden z-50'>
+     className='fixed w-screen flex  bg-stone-600 brightness-90 h-0 flex-col items-start justify-around  overflow-hidden z-50'>
 
-            <section className='absolute z-10 top-[3vw] right-[3vw]'>
-                <Close />
-            </section>
-
-            <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isToggleMenu ? 1 : 0, rotate: isToggleMenu ? 0 : 10 }}
-            transition={{  delay : .7 }}
-            >
-            <Clock />
-            </motion.section>
+    <section className='absolute z-10 top-[3vw] right-[3vw]'>
+        <Close />
+    </section>
 
         <section
           ref={linkItems}
