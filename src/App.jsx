@@ -1,4 +1,4 @@
-import {  Routes, Route, useLocation } from "react-router-dom";
+import {  Routes, Route, useLocation,useParams } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Header from "./component/header";
 import Navbar from "./component/navbar";
@@ -12,6 +12,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 function App() {
+  const { id } = useParams()
   const location = useLocation();
   const lenis = new Lenis()
 
@@ -32,7 +33,8 @@ function App() {
           <Routes location={location} key={location.key}>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<Pricing />} />
-            <Route exact path="/work" element={<Gallery />} />
+            <Route exact path="/work/" element={<Gallery />} />
+            <Route exact path="/gallery/:id" element={<Gallery />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route  path="*" element={<Notfound/>} />
           </Routes>

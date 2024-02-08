@@ -17,7 +17,7 @@ const Notfound = () => {
   return (
     <PageAnimator>
     <main className='relative h-full w-screen flex flex-col justify-center items-center bg-gray-100'>
-        <h1 className=' relative min-h-[800px] flex justify-center items-center text-black lg:text-4xl font-bold text-center text-balance sm:text-2xl'> 
+        <h1 className=' relative min-h-[800px] flex justify-center items-center text-zinc-800 lg:text-2xl font-bold text-center text-balance sm:text-xl'> 
             The page you're looking for can't be found. <br />
             Please check the URL.</h1>
         <section className='w-full'>
