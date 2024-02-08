@@ -77,7 +77,7 @@ const Navbar = () => {
                     top: 0,
                     behavior: 'smooth'
          });
-         }, 500);
+         }, 200);
     }
 
   return (

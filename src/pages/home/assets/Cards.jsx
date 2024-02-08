@@ -8,8 +8,8 @@ const Cards = () => {
   const handleClick =(index)=>{
     navigate(`/gallery/${index+1}`)
     setTimeout(() => {
-           window.scrollTo({top: 0, behavior: 'smooth'})
-    }, 100);
+           window.scrollTo({top: 0})
+    });
   }
   return (
     <main  className='space-y-5 relative lg:grid lg:grid-cols-2 sm:grid-cols-2 place-items-center h-auto lg:gap-10  lg:space-y-0 md:space-y-5 sm:space-y-5'>

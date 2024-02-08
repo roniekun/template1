@@ -5,7 +5,7 @@ const Nav = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const links = [
-        { name: 'work', to: '/work' },
+        { name: 'works', to: '/works' },
         { name: 'about', to: '/about' },
         { name: 'contact', to: '/contact' }
     ];
