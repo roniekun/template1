@@ -83,7 +83,7 @@ const Navbar = () => {
   return (
     <nav
      ref={menu}
-     className='fixed w-screen flex  bg-stone-600 brightness-90 h-0 flex-col items-start justify-around  overflow-hidden z-50'>
+     className='fixed w-screen flex  bg-stone-800 brightness-90 h-0 flex-col items-start justify-around  overflow-hidden z-50'>
 
     <section className='absolute z-10 top-[3vw] right-[3vw]'>
         <Close />
@@ -100,7 +100,8 @@ const Navbar = () => {
                     key={link.name} 
                     onClick={() => handleClick(link.to)}>
                      {link.name} 
-                                    <span className={`absolute -bottom-1 h-[3px] w-full  ${link.to===location.pathname ? 'bg-orange-500' : 'bg-gray-100'} rounded-lg scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left`}></span>
+                                    {/* <span className={`absolute -bottom-1 h-[3px] w-full  
+                                    ${link.to===location.pathname ? 'bg-orange-500' : 'bg-gray-100'} rounded-lg scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left`}></span> */}
                     </a>
                  </div>
             ))}
