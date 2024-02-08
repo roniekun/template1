@@ -1,5 +1,6 @@
 import {  Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import Header from "./component/header";
 import Navbar from "./component/navbar";
 import Home from "./pages/home";
 import Pricing from "./pages/pricing";
@@ -24,15 +25,16 @@ function App() {
   gsap.ticker.lagSmoothing(0)
   
   return (
-        <main className="bg-gray-100 flex flex-col">
+        <main className="flex flex-col">
+        <Header />
           <Navbar />
           <AnimatePresence mode="wait">
           <Routes location={location} key={location.key}>
-            <Route key="home" exact path="/" element={<Home />} />
-            <Route key="pricing" exact path="/pricing" element={<Pricing />} />
-            <Route key="gallery" exact path="/gallery" element={<Gallery />} />
-            <Route key="contact" exact path="/info" element={<Contact />} />
-            <Route key="Notfound" path="*" element={<Notfound/>} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/about" element={<Pricing />} />
+            <Route exact path="/work" element={<Gallery />} />
+            <Route exact path="/contact" element={<Contact />} />
+            <Route  path="*" element={<Notfound/>} />
           </Routes>
         </AnimatePresence>
         </main>

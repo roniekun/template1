@@ -10,7 +10,7 @@ import { Timeline } from 'gsap/gsap-core'
 import { motion } from 'framer-motion'
 
 const Navbar = () => {
-    const {setToggleMenu, isToggleMenu} = useContext(DataContext)
+    const {setToggleMenu, isToggleMenu, setLoading, isLoading} = useContext(DataContext)
     const menu = useRef(null)
     const linkItems= useRef(null)
     const socialsRef = useRef(null);  
@@ -70,6 +70,7 @@ const Navbar = () => {
 
     const handleClick = (link) => {
         setToggleMenu(!isToggleMenu)
+        setLoading(!isLoading)
          navigate(link)
          setTimeout(() => {
                     window.scrollTo({

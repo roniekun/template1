@@ -1,12 +1,9 @@
-import React from 'react'
-import Avatar from './assets/Avatar'
-import Socials from './assets/Socials'
-import Button from './assets/Button'
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useContext } from 'react'
 import { DataContext } from '../../context/DataContext'
 import Footer from '../../component/footer'
 import PageAnimator from '../../assets/anim/PageTransition'
+import Cards from './assets/Cards'
 
 const Home = () => {
   const { user, setTitle } = useContext(DataContext)
@@ -22,29 +19,23 @@ const Home = () => {
   return (
     <PageAnimator>
       <motion.main 
-        className='bg-gray-100 flex w-screen flex-col md:h-[calc(screen-64px)] sm:h-[calc(screen-56px)]'>
-      <motion.section 
-        ref={menu}
-        className='lg:fixed lg:z-10 lg:w-1/3 lg:left-0  h-screen md:h-[800px] sm:h-[800px]  flex items-center flex-col  justify-evenly'>
-       <div className='flex p-1 flex-col justify-start items-center gap-3'>
-        <Avatar />
-        <Button/>
-        <Socials/>
-       </div>
-      </motion.section>
+        className='relative flex flex-col'>
 
-      <section className='relative grid lg:grid-cols-3 w-full lg:min-h-screen'>
-        <div className='lg:col-span-1'></div>
-      
-        <div className='lg:col-span-2  bg-gray-200 relative lg:pt-10  min-h-[800px] '>
-          <div className='lg:grid lg:grid-cols-2 md:grid md:grid-cols-2'>
-          </div>
+        <section className='relative min-h-[800px] flex flex-col  bg-stone-200 p-[5vw] lg:gap-y-2'>
+        <div>
+             <h1 className='lg:text-4xl my-5 md:text-3xl  lg:mb-24 mb-16 md:mb-16 text-2xl mt-10 text-balance'>Present Studio specializes in brand strategy,
+              visual identity, and websites for founder-led businesses.</h1>
 
-      </div>
-      </section>
+        </div >
+        <div className='flex flex-col lg:gap-10 gap-5'>
+        <h1 className='lg:text-3xl md:text-2xl text-xl'>Projects:</h1>
+            <Cards /> 
+        </div>
+        </section>
+  
       
       {/* footer */}
-      <section className='sm:flex lg:grid grid-cols-3'>
+      <section className=''>
       <div></div>
         <div className='lg:col-span-2 sm:w-full'>
               <Footer />

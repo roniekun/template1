@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { motion } from 'framer-motion'
 import Header from '../../component/header'
-import Marquee from '../marquee'
+import { useLocation } from 'react-router-dom'
+import { DataContext } from '../../context/DataContext'
 
 export default function PageTransition({children}) {
-    
+    const location = useLocation()
+    const { isLoading } = useContext(DataContext)
+
     const anim = (variants) => {
       return {
         initial: 'start',
@@ -20,9 +23,15 @@ export default function PageTransition({children}) {
        },
        enter: {
           opacity: 1,
+          transition:{
+            duration: .3
+          }
        },
        leave:{
-          opacity: 1
+          opacity: 1,
+          transition:{
+            duration: .3
+          }
        }
     }
       const slide = {
@@ -63,20 +72,11 @@ export default function PageTransition({children}) {
     }
 
     return (
-        <motion.main 
-
-        className='bg-black' >
-            <motion.div  {...anim(slide)}
-              className='fixed top-0 left-0 w-screen h-screen bg-gray-100 z-20'/>
-              <motion.div {...anim(perspective)}>
-                <section className='top-0 z-10 fixed'>
-                      <Marquee />
-                      <Header />
-                  </section>
-                  <motion.div {...anim(opacity)}>
+        <motion.main >
+                  <motion.div {...anim(opacity)}
+                  className='bg-stone-300' >
                       { children }
                   </motion.div>
-              </motion.div>
         </motion.main>
     )
 }

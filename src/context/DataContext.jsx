@@ -1,15 +1,19 @@
-import React, { createContext, useState, useEffect, useContext} from "react";
+import React, { createContext, useState, useEffect } from "react";
 const DataContext = createContext()
 
 const DataProvider = ({ children  }) => {
 
-    const [title, setTitle] = useState(document.title);
-    const [isLoading, setLoading] = useState(true)
+    const defaultColor = 'black'
+    const defaultBgColor = 'transparent'
+
+    const [title, setTitle] = useState(document.title)
+    const [isLoading, setLoading] = useState(false)
+    const [color, setColor] = useState(defaultColor)
+    const [bgColor, setBgColor] = useState(defaultBgColor)
     const [isToggleMenu, setToggleMenu] = useState (false)
     const [isScrolled, setScrolled] = useState (false)
     const [currentScroll, setCurrentScroll] = useState(0)
     const [isMobile, setMobile] = useState(false)
-    // const [isTablet, setTablet] = useState(window.innerWidth >= 768)
     const [isDesktop, setDesktop] = useState(false)
 
     const user = {
@@ -18,6 +22,12 @@ const DataProvider = ({ children  }) => {
       email: 'roniebenitez01@gmail.com',
       subject: 'Project Request'
     }
+    useEffect(() => {
+      setTimeout(() => {
+              setLoading(true)
+      }, 100);
+    }, [isLoading])
+
     //dynamic document title
         useEffect(() => {
             document.title = title
@@ -59,11 +69,12 @@ const DataProvider = ({ children  }) => {
     <DataContext.Provider 
       value={{
               user,
+              defaultColor, defaultBgColor,
+              color, bgColor, setColor, setBgColor,
               title, setTitle,
               isLoading, setLoading, 
               isScrolled,
               isMobile, setMobile,
-              // isTablet, setTablet,
               isDesktop, setDesktop,
               setToggleMenu, isToggleMenu
               }}> 

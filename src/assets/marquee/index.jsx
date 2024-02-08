@@ -11,24 +11,25 @@ const Marquee = () => {
     const text2 = useRef(null);
 
       useLayoutEffect(() => {
-        if(active){
+        if(!active){
         gsap.to(container.current,{
             height: 'auto'
         })
          }
          else{
              gsap.to(container.current,{
-            height: '0'
+            height: 'auto'
           })
          }
         setTimeout(() => {
             setActive(false)
-        }, 20000);
+        }, 5000);
 
     }, [active])
 
     useLayoutEffect( () => {
-      let xPercent = 0;
+      if(active){
+      let xPercent = 0
         // animation frame
             const animate1 = () => {
                 if (xPercent > 0) {
@@ -36,12 +37,13 @@ const Marquee = () => {
                 }
                 gsap.set(text1.current, { xPercent: xPercent });
                  gsap.set(text2.current, { xPercent: xPercent });
-                requestAnimationFrame(animate1);
+                 requestAnimationFrame(animate1)
                 xPercent += 0.07;
             };
             gsap.set(text1.current, {left: text2.current.getBoundingClientRect().width})
-            requestAnimationFrame(animate1);
-    }, [ ])
+            animate1()
+      }
+    }, [text1, text2, active ])
 
 
   return (
