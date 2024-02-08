@@ -6,7 +6,7 @@ const Cards = () => {
   const navigate = useNavigate()
 
   const handleClick =(index)=>{
-    navigate(`/gallery/${index+1}`)
+    navigate(`/gallery/${index+1}/`)
     setTimeout(() => {
            window.scrollTo({top: 0})
     });

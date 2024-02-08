@@ -21,7 +21,8 @@ const Header = () => {
   return (
     <header
           style={{backgroundColor: bgColor}}
-          className={`w-screen  top-0 transition flex flex-col fixed backdrop-brightness-90 z-10 backdrop-blur-lg  ${isScrolled ? 'transform -translate-y-full' : ''}`}>
+          className={`w-screen  top-0 transition flex flex-col fixed backdrop-brightness-90 z-10 backdrop-blur-lg 
+          ${isScrolled ? 'transform -translate-y-full' : ''}`}>
         <motion.section
             initial={{opacity: 0}}
             animate={{opacity: 1}}

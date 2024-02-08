@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/pricing" element={<Pricing />} />
             <Route exact path="/gallery" element={<Gallery />} />
             <Route exact path="/works" element={<Gallery />} />
-            <Route exact path="/gallery/:id" element={<Gallery />} />
+            <Route exact path="/gallery/:id/" element={<Gallery />} />
             <Route exact path="/about" element={<Contact />} />
              <Route exact path="/contact" element={<Contact />} />
             <Route  path="*" element={<Notfound/>} />
