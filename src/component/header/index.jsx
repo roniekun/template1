@@ -21,13 +21,12 @@ const Header = () => {
   return (
     <header
           style={{backgroundColor: bgColor}}
-          className={`w-screen  top-0 transition flex flex-col fixed z-10`}>
+          className={`w-screen  top-0 transition flex flex-col fixed backdrop-brightness-90 z-10 backdrop-blur-lg  ${isScrolled ? 'transform -translate-y-full' : ''}`}>
         <motion.section
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: .3, delay: .7}}
-            className={`flex relative justify-between px-[5vw] items-center w-screen  h-14 md:h-16 opacity-0  z-0 
-            ${isScrolled ? 'transform -translate-y-full' : ''}`}>
+            className={`flex relative justify-between px-[5vw] items-center w-screen  h-14 md:h-16 opacity-0  z-0 `}>
               {homeButton ? <Home /> : <Logo />}
             { !isToggleMenu && (isMobile ? <Menu /> : <Nav/>)}
         </motion.section>
