@@ -12,12 +12,10 @@ const Home = () => {
     const handleClick = () =>{
          navigate('/')
          setToggleMenu(false)
-         setTimeout(() => {
                     window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
          });
-         }, 500);
     }
   return (
     <>
