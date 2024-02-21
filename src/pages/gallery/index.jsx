@@ -21,7 +21,12 @@ const Gallery = () => {
   return (
     <PageAnimator>
     <main className='min-h-screen bg-gray-100'>
-        <div className='h-screen flex place-items-center justify-center'>
+        <div className='flex-col h-screen flex '>
+              <div
+              className='p-20 bg-zinc-300'>
+              <h1 className='text-7xl uppercase'>
+               Work
+      </h1></div>
          { isValid ?  
          <div className='h-full w-full flex flex-col justify-center items-center'>
           <h1 className='text-3xl'> Featured Posts {id}</h1>
