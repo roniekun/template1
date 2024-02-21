@@ -21,10 +21,10 @@ const Nav = () => {
     }
 
     return (
-        <main className='bg-blend-difference capitalize text-zinc-900 text-sm gap-3 flex items-center  relative justify-center'>
+        <main className='bg-blend-difference capitalize text-zinc-900 text-sm gap-10 flex items-center  relative justify-center'>
             {links.map((link) => (
                 <a
-                className='cursor-pointer secondary-font relative flex flex-col group'
+                className='cursor-pointer secondary-font relative flex flex-col group uppercase'
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 

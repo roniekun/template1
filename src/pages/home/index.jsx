@@ -21,14 +21,14 @@ const Home = () => {
       <motion.main 
         className='relative flex flex-col'>
 
-        <section className='relative min-h-[800px] flex flex-col  bg-stone-200 p-[5vw] lg:gap-y-2'>
-        <div className='border-zinc-700 w-ful  lg:mb-24 mb-16 mt-16 md:mb-16 my-5'>
-             <h1 className='lg:text-3xl md:text-3xl  text-2xl text-balance'>
+        <section className='relative min-h-[800px] flex flex-col  bg-stone-200 p-[3vw] lg:gap-y-2'>
+        <div className='border-zinc-700 w-ful  lg:mb-16 mb-16 mt-16 md:mb-16 my-5'>
+             <h1 className='lg:text-3xl md:text-2xl  text-2xl uppercase font-light'>
              Present Studio specializes in brand strategy,
               visual identity, and websites for founder-led businesses.</h1>
         </div >
-        <div className='flex flex-col lg:gap-10 gap-5'>
-        <h1 className='lg:text-2xl  text-xl'>Projects:</h1>
+        <div className='flex flex-col gap-5'>
+        <h1 className='lg:text-xl  text-xl'>Projects:</h1>
             <Cards /> 
         </div>
         </section>
