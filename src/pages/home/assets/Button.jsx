@@ -13,8 +13,8 @@ const Button = () => {
   return (
     <button
       onClick={handleClick}
-      className="group flex items-center justify-center primary-font text-base gap-2 font-base transition
-       transform text-black hover:text-white hover:bg-blue-800 focus:outline-none hover:shadow-lg focus:ring my-5
+      className="group flex items-center justify-center primary-font text-base gap-2 font-base transition bg-blue-800
+       transform text-gray-200 hover:text-gray-50 hover:bg-blue-800 focus:outline-none hover:shadow-lg focus:ring
          focus:ring-offset-1 focus:ring-gray-300 border border-gray-900 hover:border-opacity-0 py-5 px-10">
         Get in touch
     </button>
