@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext, useRef, useEffect } from 'react'
 import { DataContext } from '../../../context/DataContext'
-import { CgMenuRight } from "react-icons/cg";
+import { RxHamburgerMenu } from "react-icons/rx";
 import gsap from 'gsap'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -34,7 +34,7 @@ const Menu = () => {
                 onClick={handleClick}
                 className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2 -z-10'> 
        
-                <CgMenuRight className='opacity-90 group-hover:opacity-80 w-7 h-7' />
+                <RxHamburgerMenu className='opacity-90 group-hover:opacity-80 w-7 h-7' />
                 </motion.button>
          </AnimatePresence>
   )

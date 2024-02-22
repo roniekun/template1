@@ -10,7 +10,7 @@ const Cards = () => {
     navigate(`/gallery/${index+1}/`)
     setTimeout(() => {
            window.scrollTo({top: 0})
-    });
+    },100);
   }
 
   return (

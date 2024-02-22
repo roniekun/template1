@@ -15,8 +15,14 @@ const Contact = () => {
   return (
     <PageAnimator>
       <main className='min-h-screen bg-gray-100'>
-        <div className='h-screen'>
+        <section className='h-screen'>
+          <div
+            className='md:p-20 py-20 px-5 bg-zinc-300'>
+            <h1 className='md:text-7xl text-5xl uppercase'>
+            Contact
+        </h1>
       </div>
+      </section>
       <section>
         <Footer />
       </section>

@@ -18,8 +18,8 @@ const Navbar = () => {
 
     const links = [
         { name: 'works', to: '/gallery' },
-        { name: 'pricing', to: '/pricing' },
-        { name: 'info', to: '/contact' }
+        { name: 'about', to: '/about' },
+        { name: 'contact', to: '/contact' }
     ];
 
     useEffect(() => {

@@ -25,7 +25,8 @@ const Home = () => {
               initial={{opacity: 0}}
               transition={{duration: .3, delay: .7}}
               animate={{opacity: 1}}
-              className='mix-blend-difference secondary-font relative text-xs text-zinc-700 uppercase z-10 flex gap-1 items-center justify-center rounded-lg border border-gray-900 p-1 px-2 group hover:bg-zinc-200 transition'
+              className='mix-blend-difference secondary-font relative text-xs text-zinc-700 uppercase z-10 flex gap-1 items-center
+               justify-center rounded-lg p-1 px-2 group hover:bg-zinc-400 transition'
               onClick={handleClick}>
             <BackIcon className='w-5'/>
             return home
