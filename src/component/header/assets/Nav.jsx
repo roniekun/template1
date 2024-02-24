@@ -28,7 +28,7 @@ const Nav = () => {
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 
-              <span key={link} className={`absolute bottom-1 h-[1px] w-4/5  bg-zinc-700 rounded-lg scale-x-0 origin-right transition
+              <span key={link} className={`absolute bottom-0.5 h-[1px] w-3/4  bg-zinc-700 rounded-lg scale-x-0 origin-right transition
               left-1/2 -translate-x-1/2 
               duration-300 ease-out  group-hover:scale-x-100 group-hover:origin-left ${location.pathname===link.to ? 'scale-x-100': 'scale-x-0'}`}>
               </span>

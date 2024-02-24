@@ -14,14 +14,14 @@ const Cards = () => {
   }
 
   return (
-    <main  className='space-y-5 relative lg:grid lg:grid-cols-4 sm:grid-cols-2 h-auto lg:gap-5
-      lg:space-y-0 md:space-y-5 sm:space-y-5 group'>
+    <main  className='relative lg:grid lg:grid-cols-4 gap-5 md:grid md:grid-cols-2
+      group'>
     {cardData.map((card, index)=>( 
     <div key={index}
         onClick={()=>handleClick(index)}
           onMouseEnter={() => setHoveredItem(index)}
           onMouseLeave={() => setHoveredItem(null)}
-         className={`flex group  flex-col w-full h-[500px]  lg:h-[500px] md:h-[800px]  
+         className={`flex group  flex-col w-full h-[600px]  md:h-[500px] 
          ${hoveredItem !== index ? 'group-hover:contrast-50': ''} gap-2 relative contrast-100 border-black  cursor-pointer`}>
         <img className=' w-full h-full relative border border-zinc-400 self-center object-cover' 
         src="" alt="thumbnail" />
