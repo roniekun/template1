@@ -16,7 +16,7 @@ const Gallery = () => {
         setTitle(`${location.title} - ${user.title}`)
       }, [location.pathname])
 
-const idAsString = id.toString(); 
+const idAsString = id?.toString() ?? ''
 const isValidStringId =  idAsString.charAt(0) !== '0' 
 const isValid =  Number(id) <= 4 || !id  
 
