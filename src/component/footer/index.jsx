@@ -21,10 +21,12 @@ const Footer = () => {
         </section>
 
     <section className='relative flex flex-col lg:place-items-center'>
-    <div className='text-left uppercase self-end'>
+    <div className='text-left capitalize self-end flex flex-col gap-1'>
         <h2 className='primary-font font-medium md:text-lg'>
-            all rights reserved  <br /> &copy;{date.getUTCFullYear()}
+            all rights reserved 
         </h2>
+        <h1>  &copy;{date.getUTCFullYear()}
+        </h1>
         {/* <h4>created by <a href="http://roniecode.vercel.app" target='_blank'>
          Ronie</a>
         </h4> */}

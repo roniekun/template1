@@ -21,14 +21,16 @@ const Nav = () => {
     }
 
     return (
-        <main className='bg-blend-difference capitalize text-zinc-900 text-sm gap-10 flex items-center  relative justify-center'>
+        <main className='bg-blend-difference capitalize text-zinc-700 text-sm gap-10 flex items-center  relative justify-center'>
             {links.map((link) => (
                 <a
-                className='cursor-pointer secondary-font relative flex flex-col group uppercase'
+                className='cursor-pointer secondary-font relative flex flex-col group uppercase  hover:bg-zinc-400  rounded-lg p-1 px-2'
                 key={link.name} 
                 onClick={() => handleClick(link.to)}>
                     {link.name} 
-              <span key={link} className={`absolute -bottom-0 h-[1px] w-full  bg-zinc-700 rounded-lg scale-x-0 origin-right transition duration-300 ease-out  group-hover:scale-x-100 group-hover:origin-left ${location.pathname===link.to ? 'scale-x-100': 'scale-x-0'}`}>
+              <span key={link} className={`absolute bottom-1 h-[1px] w-4/5  bg-zinc-700 rounded-lg scale-x-0 origin-right transition
+              left-1/2 -translate-x-1/2 
+              duration-300 ease-out  group-hover:scale-x-100 group-hover:origin-left ${location.pathname===link.to ? 'scale-x-100': 'scale-x-0'}`}>
               </span>
                 </a>
             ))}

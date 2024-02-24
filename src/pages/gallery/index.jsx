@@ -16,7 +16,10 @@ const Gallery = () => {
         setTitle(`${location.title} - ${user.title}`)
       }, [location.pathname])
 
-      const isValid = Number(id) <= 4 || !id
+const idAsString = id.toString(); 
+const isValidStringId =  idAsString.charAt(0) !== '0' 
+const isValid =  Number(id) <= 4 || !id  
+
 
   return (
     <PageAnimator>
@@ -28,13 +31,15 @@ const Gallery = () => {
                Work
       </h1>
       </div>
-         { isValid ?  
+         { isValid && isValidStringId ?  
          <div className='h-full w-full flex flex-col justify-center items-center'>
           <h1 className='text-3xl'> Featured Posts {id}</h1>
           <p>Display grid of images*</p>
          </div>
           :
+          <div className='min-h-[400px] flex justify-center items-center'>
           <Invalid/> 
+          </div>
           }
         </div>
       <section>
