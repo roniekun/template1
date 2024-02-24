@@ -34,7 +34,7 @@ const Home = () => {
             </div> */}
         </div >
         <div className='flex flex-col gap-5 '>
-        <h1 className='lg:text-xl  text-xl'>Projects:</h1>
+        <h1 className='font-light uppercase text-xl'>Projects:</h1>
             <Cards /> 
         </div>
         </section>

@@ -9,8 +9,8 @@ const Cards = () => {
   const handleClick =(index)=>{
     navigate(`/gallery/${index+1}/`)
     setTimeout(() => {
-           window.scrollTo({top: 0})
-    },100);
+          window.scrollTo({top: 0, behavior: 'smooth'})
+    }, 200);
   }
 
   return (
