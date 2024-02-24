@@ -22,7 +22,7 @@ const Footer = () => {
 
     <section className='relative flex flex-col lg:place-items-center'>
     <div className='text-left capitalize self-end flex flex-col gap-1'>
-        <h2 className='primary-font font-medium md:text-lg'>
+        <h2 className='primary-font font-base md:text-lg'>
             all rights reserved 
         </h2>
         <h1>  &copy;{date.getUTCFullYear()}

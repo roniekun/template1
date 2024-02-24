@@ -4,6 +4,7 @@ import { DataContext } from '../../context/DataContext'
 import Footer from '../../component/footer'
 import PageAnimator from '../../assets/anim/PageTransition'
 import Cards from './assets/Cards'
+import Questions from './assets/Questions'
 import Button from './assets/Button'
 
 const Home = () => {
@@ -20,11 +21,11 @@ const Home = () => {
   return (
     <PageAnimator>
       <motion.main 
-        className='relative flex flex-col'>
+        className='relative flex flex-col bg-stone-100'>
 
-        <section className='relative min-h-[800px] flex flex-col bg-stone-200 p-[3vw]'>
+        <section className='relative min-h-[800px] flex flex-col p-[3vw]'>
         <div className='border-zinc-700 w-full mt-16 my-5 flex flex-col gap-2'>
-             <h1 className='lg:text-3xl md:text-2xl  text-2xl uppercase font-light'>
+             <h1 className='lg:text-3xl md:text-2xl  text-2xl uppercase font-medium'>
              YourStudio specializes in brand strategy &
               visual identity.</h1>
             <p className='md:w-1/2 p-1 text-md leading-snug'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum sint,
@@ -37,6 +38,10 @@ const Home = () => {
         <h1 className='font-light uppercase text-xl'>Projects:</h1>
             <Cards /> 
         </div>
+        </section>
+
+        <section className='bg-transparent p-[2vw] h-auto'>
+          <Questions />
         </section>
   
       
