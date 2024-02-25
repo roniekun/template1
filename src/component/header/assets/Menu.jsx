@@ -12,11 +12,9 @@ const Menu = () => {
 
         useEffect(() => {
         if (isToggleMenu) {
-            gsap.to(btn.current, { color: 'white', borderColor: 'white' });
             document.body.style.overflow = 'hidden'
         }
         else{
-            gsap.to(btn.current, { color: 'black', borderColor: 'black' });
             document.body.style.overflow = 'scroll'
         }
         }, [isToggleMenu]);
@@ -32,9 +30,12 @@ const Menu = () => {
                 transition={{duration: .3, delay: .7}}
                 ref={btn}
                 onClick={handleClick}
-                className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] text-black uppercase text-[12px] py-1 w-auto px-2 -z-10'> 
-       
-                <RxHamburgerMenu className='opacity-90 group-hover:opacity-80 w-7 h-7' />
+                className='bg-blend-difference group flex items-center justify-center absolute right-[5vw] py-2 rounded-lg w-auto px-3 -z-10
+                hover:bg-zinc-400 border-zinc-700 hover:ring ring-inset-2 ring-stone-300'> 
+                <h1 className='uppercase text-sm text-zinc-700'>
+                 Menu
+                </h1>
+                {/* <RxHamburgerMenu className='opacity-90 group-hover:opacity-80 w-7 h-7' /> */}
                 </motion.button>
          </AnimatePresence>
   )

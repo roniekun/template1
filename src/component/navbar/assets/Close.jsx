@@ -11,8 +11,8 @@ const Close = () => {
             className='group  cursor-pointer brightness-90 hover:brightness-100 text-gray-100 
             place-items-center flex w-fit  px-5 py-2 rounded-2xl'>
             
-            <span className='text-[5vw]'>Close</span> 
-            <IoCloseSharp className='fill-gray-100 w-[7vw] h-[7vw] relative group-hover:brightness-100'/>
+            <span className='text-base'>Close</span> 
+            <IoCloseSharp className='fill-gray-100 w-7 h-7 relative group-hover:brightness-100'/>
             </button> 
   )
 }

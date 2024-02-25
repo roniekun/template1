@@ -29,7 +29,8 @@ const Header = () => {
             transition={{duration: .3, delay: .7}}
             className={`flex relative justify-between px-[3vw] items-center w-screen  h-12 md:h-12  z-0 `}>
               {homeButton ? <Home /> : <Logo />}
-            { !isToggleMenu && (isMobile ? <Menu /> : <Nav/>)}
+            {/* { !isToggleMenu && (isMobile ? <Menu /> : <Nav/>)} */}
+              <Menu />
         </motion.section>
     </header>
   )

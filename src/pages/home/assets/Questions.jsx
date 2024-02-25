@@ -18,22 +18,22 @@ const Questions = () => {
     return (
         <main className='h-auto w-full flex flex-col gap-y-5'>
             {questionsData.map((data, index) => (
-                <div key={index} className='flex flex-col'>
-                    <div className='group'>
+                <div key={index} className='flex flex-col '>
+                    <div className='group lg:py-5 py-2'>
                         <h1
-                        key={index}
-                         onClick={() =>  handleClick(index)} 
-                         className='text-lg cursor-pointer py-5 px-2'>
-                        0{index+1}    {data.question}
+                            key={index}
+                            onClick={() =>  handleClick(index)} 
+                            className='cursor-pointer text-base px-2'>
+                            #0{index+1}    {data.question}
                         </h1>
                     </div>
                     <motion.div 
                     animate={{height: isActive[index]? 'auto' : '0'}}
                     // ref={(el) => (answers.current[index] = el)}
-                    className=' overflow-hidden  transition h-0 duration-300 flex text-balance rounded-md'>
-                        <h1 className='py-5 px-2 text-lg leading-snug' >{data.answer}</h1>
+                    className='overflow-hidden  transition h-0 duration-300 flex rounded-md'>
+                        <h1 className='px-2 text-base leading-snug lg:py-5 py-2' >{data.answer}</h1>
                     </motion.div>
-                    <span className='h-[1px] w-full bg-stone-700'/>
+                  { index !== questionsData.length-1 && <span className='h-[1px] w-full bg-stone-700'/>}
                 </div>
             ))}
         </main>

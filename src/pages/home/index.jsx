@@ -40,7 +40,10 @@ const Home = () => {
         </div>
         </section>
 
-        <section className='bg-transparent p-[2vw] h-auto'>
+        <section className='bg-transparent p-[3vw] min-h-[800px] flex flex-col gap-10 py-16 border-t border-black rounded-t-3xl'>
+        <h1
+        className='text-left h-fit text-xl w-full uppercase p-1'
+        >Frequently asked questions</h1>
           <Questions />
         </section>
   
