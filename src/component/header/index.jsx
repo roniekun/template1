@@ -27,7 +27,7 @@ const Header = () => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: .3, delay: .7}}
-            className={`flex relative justify-between px-[3vw] items-center w-screen  h-12 md:h-12  z-0 `}>
+            className={`flex relative justify-between px-[3vw] items-center w-screen  h-14   z-0 `}>
               {homeButton ? <Home /> : <Logo />}
             {/* { !isToggleMenu && (isMobile ? <Menu /> : <Nav/>)} */}
               <Menu />
