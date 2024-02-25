@@ -16,10 +16,10 @@ const Questions = () => {
     };
 
     return (
-        <main className='h-auto w-full flex flex-col gap-y-5'>
+        <main className='h-auto w-full flex flex-col'>
             {questionsData.map((data, index) => (
                 <div key={index} className='flex flex-col '>
-                    <div className='group lg:py-5 py-2'>
+                    <div className='group lg:py-10 md:py-7 py-5'>
                         <h1
                             key={index}
                             onClick={() =>  handleClick(index)} 

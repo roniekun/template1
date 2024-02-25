@@ -27,6 +27,7 @@ export default {
     variants: {
       extend: {
         backgroundColor: ["active"],
+        ring: ["active"]
       },
     },
   },
